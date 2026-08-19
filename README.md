@@ -1,69 +1,10 @@
-# Composio AI Product Operations — 100-App Integration Readiness Audit & Case Study
+# Composio AI Product Operations — Research Agent
 
 > **"I built the workflow. The agent did the research. I checked where it could fail. Humans handled the cases that automation could not confidently resolve."**
 
 **Author:** Shaik Ashik ([smdashik2516@gmail.com](mailto:smdashik2516@gmail.com))  
 **Repository:** [https://github.com/ashik-2516/Composio-product-operations-assignment](https://github.com/ashik-2516/Composio-product-operations-assignment)  
-**Deliverable:** Self-contained, interactive single-page Case Study & Dashboard (`index.html`) with underlying modular Python research agent codebase and 100-app structured dataset.
-
----
-
-## Deliverables Summary
-
-| Deliverable | Location | Description |
-|---|---|---|
-| **Interactive Case Study Dashboard** | `index.html` | Single-page interactive case study with live audit simulator, searchable matrix, Chart.js visualizations, and slide-out evidence drawer. |
-| **CLI Research Agent** | `agent/run.py` | Interactive command-line agent tool for auditing applications and software categories. |
-| **Verified Final Dataset (JSON)** | `data/results_final.json` | 100 structured, schema-compliant records with primary developer evidence URLs. |
-| **Tabular Dataset Export (CSV)** | `data/dataset.csv` | Full tabular export for spreadsheet and data warehouse ingestion. |
-| **Statistical Metrics & Tiers** | `data/metrics.json` | Global distribution metrics across Auth, Access, API Breadth, and Composio Priority Tiers. |
-| **Human Verification Queue** | `data/verification_queue.json` | 12 high-risk boundary cases audited against primary documentation. |
-| **Pass 1 Raw Benchmark** | `data/results_pass1.json` | Benchmark dataset before two-pass calibration. |
-
----
-
-## Core Thesis & Division of Responsibility
-
-To research 100 applications without manual fatigue or hallucinated claims, the workload was systematically partitioned:
-
-```
-+-----------------------------------+     +-----------------------------------+     +-----------------------------------+
-|            ME (Human)             |     |               AGENT               |     |           HUMAN REVIEW            |
-|      Architecture & Strategy      |     |        Scalable Execution         |     |        Edge-Case Judgment         |
-+-----------------------------------+     +-----------------------------------+     +-----------------------------------+
-| * Defined the 6 research fields   |     | * Concurrently researched 100 apps|     | * Audited ambiguous paywalls      |
-| * Designed 6-step agent workflow  | --> | * Queried primary developer docs  | --> | * Resolved portal contradictions  |
-| * Built 2-pass verification rules |     | * Extracted Auth, Access, APIs    |     | * Checked enterprise admin roles  |
-| * Established quality gates       |     | * Produced structured JSON output |     | * Marked residual uncertainties   |
-+-----------------------------------+     +-----------------------------------+     +-----------------------------------+
-```
-
----
-
-## Macro Findings Across 100 Applications
-
-1. **OAuth 2.0 (67%) and API Keys (68%) Dominate Modern SaaS**:
-   - Developer and productivity tools offer immediate Bearer tokens; legacy enterprise platforms still require Basic Auth (16%) or SAML/JWT (7%).
-2. **Documentation != Self-Serve Access (28% Enforce Operational Gates)**:
-   - Having public API documentation does not mean developers can immediately obtain credentials: **17%** require paid plan upgrades, **8%** require tenant admin privileges, and **3%** enforce partner/sales review.
-3. **Emergence of First-Party MCP Servers (27%)**:
-   - Official Model Context Protocol servers are accelerating across platforms like Notion, Slack, Salesforce, Cloudflare, Supabase, and Google Ads.
-4. **Composio Toolkit Priority Tiering**:
-   - **Tier 1 (Easy Wins)**: **70 apps (70%)** — Self-serve auth + standard REST/GraphQL.
-   - **Tier 2 (Some Friction)**: **16 apps (16%)** — Requires paid plan or local CLI environment.
-   - **Tier 3 (Outreach Needed)**: **7 apps (7%)** — Admin approval or developer token review required.
-   - **Tier 4 (Poor Candidate)**: **7 apps (7%)** — Extreme paywalls ($20k+), partner-gated programs, or heavy PII compliance.
-
----
-
-## Priority Tiering Breakdown
-
-| Priority Tier | Apps Count | Percentage | Profile & Characteristics | Representative Examples |
-|---|:---:|:---:|---|---|
-| **Tier 1: Easy Wins** | **70** | **70%** | Public REST/GraphQL + 100% Self-Serve credentials + Zero blockers | Stripe, GitHub, Notion, Linear, Supabase, Slack, Shopify, Consensus |
-| **Tier 2: Buildable With Friction** | **16** | **16%** | High buildability, but requires paid plan for API keys or CLI packaging | Copper, Front, Squarespace, Ahrefs, Brex, Sherlock, Mermaid CLI |
-| **Tier 3: Outreach Needed** | **7** | **7%** | API exists, but requires Admin toggle, Developer Token review, or partner form | DealCloud, Gladly, Google Ads, LinkedIn Ads, Pylon, WhatsApp Business |
-| **Tier 4: Poor Candidate** | **7** | **7%** | Extreme paywall ($20k+), No public consumer API, or severe PII gating | PitchBook, NotebookLM Enterprise, Amazon SP-API |
+**Live Case Study & Dashboard:** Open [`index.html`](index.html) in any web browser.
 
 ---
 
@@ -136,9 +77,9 @@ Open **[http://localhost:8000](http://localhost:8000)** in your browser to explo
 ```
 .
 |-- index.html                   # Interactive Case Study & Research Dashboard
-|-- README.md                    # Project documentation & execution guide
+|-- README.md                    # Project execution guide
 |-- requirements.txt             # Python dependencies
-|-- .env.example                 # Clean environment variable template (no secrets)
+|-- .env.example                 # Environment variable template
 |-- .gitignore                   # Git ignore patterns
 |
 |-- agent/                       # Core Research Agent Codebase
@@ -174,9 +115,9 @@ Open **[http://localhost:8000](http://localhost:8000)** in your browser to explo
 
 ---
 
-## JSON Schema Adherence
+## Output Schema
 
-Every record in `data/results_final.json` follows this standardized schema:
+Every record in `data/results_final.json` strictly adheres to the required schema:
 
 ```json
 {
@@ -224,11 +165,3 @@ Every record in `data/results_final.json` follows this standardized schema:
   "id": 81
 }
 ```
-
----
-
-## Ground Truth Quality & Evidence Guarantee
-
-- **100% Primary Documentation**: Every claim is backed by official developer portal documentation, OpenAPI specs, or vendor repositories.
-- **Two-Pass Verification**: Corrected 12 systematic failure modes (conflating CLI tools with cloud APIs, assuming public docs mean self-serve credentials, missing enterprise admin requirements).
-- **Intellectual Honesty**: Explicitly documented boundaries on unverified private sales contract minimums and tenant sandboxes.
