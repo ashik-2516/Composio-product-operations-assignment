@@ -4,51 +4,51 @@
 
 **Author:** Shaik Ashik ([smdashik2516@gmail.com](mailto:smdashik2516@gmail.com))  
 **Repository:** [https://github.com/ashik-2516/Composio-product-operations-assignment](https://github.com/ashik-2516/Composio-product-operations-assignment)  
-**Deliverable:** Self-contained, interactive single-page Case Study & Dashboard ([`index.html`](index.html)) with underlying modular Python research agent codebase and 100-app structured dataset.
+**Deliverable:** Self-contained, interactive single-page Case Study & Dashboard (`index.html`) with underlying modular Python research agent codebase and 100-app structured dataset.
 
 ---
 
-## 🚀 Quick Links & Deliverables
+## Deliverables Summary
 
 | Deliverable | Location | Description |
 |---|---|---|
-| **Interactive Case Study Dashboard** | [`index.html`](index.html) | Single-page interactive case study with live audit simulator, searchable matrix & slide-out evidence drawer. |
-| **CLI Research Agent** | [`agent/run.py`](agent/run.py) | Interactive command-line agent tool for auditing applications and categories. |
-| **Verified Final Dataset (JSON)** | [`data/results_final.json`](data/results_final.json) | 100 structured, schema-compliant records with primary evidence URLs. |
-| **Tabular Dataset Export (CSV)** | [`data/dataset.csv`](data/dataset.csv) | Full tabular export for spreadsheet and data warehouse ingestion. |
-| **Statistical Metrics & Tiers** | [`data/metrics.json`](data/metrics.json) | Global distribution metrics across Auth, Access, API Breadth, and Composio Tiers. |
-| **Human Verification Queue** | [`data/verification_queue.json`](data/verification_queue.json) | 12 high-risk boundary cases audited against primary documentation. |
-| **Pass 1 Raw Benchmark** | [`data/results_pass1.json`](data/results_pass1.json) | Benchmark dataset before two-pass calibration. |
+| **Interactive Case Study Dashboard** | `index.html` | Single-page interactive case study with live audit simulator, searchable matrix, Chart.js visualizations, and slide-out evidence drawer. |
+| **CLI Research Agent** | `agent/run.py` | Interactive command-line agent tool for auditing applications and software categories. |
+| **Verified Final Dataset (JSON)** | `data/results_final.json` | 100 structured, schema-compliant records with primary developer evidence URLs. |
+| **Tabular Dataset Export (CSV)** | `data/dataset.csv` | Full tabular export for spreadsheet and data warehouse ingestion. |
+| **Statistical Metrics & Tiers** | `data/metrics.json` | Global distribution metrics across Auth, Access, API Breadth, and Composio Priority Tiers. |
+| **Human Verification Queue** | `data/verification_queue.json` | 12 high-risk boundary cases audited against primary documentation. |
+| **Pass 1 Raw Benchmark** | `data/results_pass1.json` | Benchmark dataset before two-pass calibration. |
 
 ---
 
-## 🧭 The Core Thesis & Division of Responsibility
+## Core Thesis & Division of Responsibility
 
 To research 100 applications without manual fatigue or hallucinated claims, the workload was systematically partitioned:
 
 ```
-┌───────────────────────────────────┐     ┌───────────────────────────────────┐     ┌───────────────────────────────────┐
-│            ME (Human)             │     │               AGENT               │     │           HUMAN REVIEW            │
-│      Architecture & Strategy      │     │        Scalable Execution         │     │        Edge-Case Judgment         │
-├───────────────────────────────────┤     ├───────────────────────────────────┤     ├───────────────────────────────────┤
-│ • Defined the 6 research fields   │     │ • Concurrently researched 100 apps│     │ • Audited ambiguous paywalls      │
-│ • Designed 6-step agent workflow  │ ──> │ • Queried primary developer docs  │ ──> │ • Resolved portal contradictions  │
-│ • Built 2-pass verification rules │     │ • Extracted Auth, Access, APIs    │     │ • Checked enterprise admin roles  │
-│ • Established quality gates       │     │ • Produced structured JSON output │     │ • Marked residual uncertainties   │
-└───────────────────────────────────┘     └───────────────────────────────────┘     └───────────────────────────────────┘
++-----------------------------------+     +-----------------------------------+     +-----------------------------------+
+|            ME (Human)             |     |               AGENT               |     |           HUMAN REVIEW            |
+|      Architecture & Strategy      |     |        Scalable Execution         |     |        Edge-Case Judgment         |
++-----------------------------------+     +-----------------------------------+     +-----------------------------------+
+| * Defined the 6 research fields   |     | * Concurrently researched 100 apps|     | * Audited ambiguous paywalls      |
+| * Designed 6-step agent workflow  | --> | * Queried primary developer docs  | --> | * Resolved portal contradictions  |
+| * Built 2-pass verification rules |     | * Extracted Auth, Access, APIs    |     | * Checked enterprise admin roles  |
+| * Established quality gates       |     | * Produced structured JSON output |     | * Marked residual uncertainties   |
++-----------------------------------+     +-----------------------------------+     +-----------------------------------+
 ```
 
 ---
 
-## 📊 Macro Findings Across 100 Applications
+## Macro Findings Across 100 Applications
 
 1. **OAuth 2.0 (67%) and API Keys (68%) Dominate Modern SaaS**:
-   - Developer and productivity tools offer immediate Bearer tokens; legacy enterprise tools still use Basic Auth (16%) or SAML/JWT (7%).
-2. **Documentation ≠ Self-Serve Access (28% Enforce Gates)**:
-   - Having public API docs does not mean developers can immediately get keys: **17%** require paid plans, **8%** require tenant admin privileges, and **3%** enforce partner/sales review.
+   - Developer and productivity tools offer immediate Bearer tokens; legacy enterprise platforms still require Basic Auth (16%) or SAML/JWT (7%).
+2. **Documentation != Self-Serve Access (28% Enforce Operational Gates)**:
+   - Having public API documentation does not mean developers can immediately obtain credentials: **17%** require paid plan upgrades, **8%** require tenant admin privileges, and **3%** enforce partner/sales review.
 3. **Emergence of First-Party MCP Servers (27%)**:
-   - Official Model Context Protocol servers are accelerating across tools like Notion, Slack, Salesforce, Cloudflare, Supabase, and Google Ads.
-4. **Composio Toolkit Priority Tiers**:
+   - Official Model Context Protocol servers are accelerating across platforms like Notion, Slack, Salesforce, Cloudflare, Supabase, and Google Ads.
+4. **Composio Toolkit Priority Tiering**:
    - **Tier 1 (Easy Wins)**: **70 apps (70%)** — Self-serve auth + standard REST/GraphQL.
    - **Tier 2 (Some Friction)**: **16 apps (16%)** — Requires paid plan or local CLI environment.
    - **Tier 3 (Outreach Needed)**: **7 apps (7%)** — Admin approval or developer token review required.
@@ -56,10 +56,21 @@ To research 100 applications without manual fatigue or hallucinated claims, the 
 
 ---
 
-## 🛠️ How to Run the Research Agent
+## Priority Tiering Breakdown
+
+| Priority Tier | Apps Count | Percentage | Profile & Characteristics | Representative Examples |
+|---|:---:|:---:|---|---|
+| **Tier 1: Easy Wins** | **70** | **70%** | Public REST/GraphQL + 100% Self-Serve credentials + Zero blockers | Stripe, GitHub, Notion, Linear, Supabase, Slack, Shopify, Consensus |
+| **Tier 2: Buildable With Friction** | **16** | **16%** | High buildability, but requires paid plan for API keys or CLI packaging | Copper, Front, Squarespace, Ahrefs, Brex, Sherlock, Mermaid CLI |
+| **Tier 3: Outreach Needed** | **7** | **7%** | API exists, but requires Admin toggle, Developer Token review, or partner form | DealCloud, Gladly, Google Ads, LinkedIn Ads, Pylon, WhatsApp Business |
+| **Tier 4: Poor Candidate** | **7** | **7%** | Extreme paywall ($20k+), No public consumer API, or severe PII gating | PitchBook, NotebookLM Enterprise, Amazon SP-API |
+
+---
+
+## How to Run the Research Agent
 
 ### Prerequisites
-- **Python 3.10+** (Uses standard library for zero-dependency portability).
+- **Python 3.10+** (The core workflow uses the Python Standard Library for zero-dependency portability).
 
 ### 1. Installation
 ```bash
@@ -120,51 +131,52 @@ Open **[http://localhost:8000](http://localhost:8000)** in your browser to explo
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 .
-├── index.html                   # Interactive Case Study & Research Dashboard
-├── README.md                    # Project documentation & execution guide
-├── requirements.txt             # Python dependencies
-├── .gitignore                   # Git ignore patterns
-│
-├── agent/                       # Core Research Agent Codebase
-│   ├── run.py                   # Interactive CLI runner (--app, --category, --verify, --all)
-│   ├── research_agent.py        # Main ComposioResearchAgent orchestrator class
-│   ├── tools.py                 # DocSearchTool, WebScraperTool, and MCPRegistryTool
-│   ├── browser_verifier.py      # Live HTTP portal check & heuristic engine
-│   └── config.py                # Agent configuration & logging
-│
-├── data/                        # Datasets & Outputs
-│   ├── results_final.json       # 100 verified structured records with primary evidence
-│   ├── results_pass1.json       # Raw extraction benchmark before calibration
-│   ├── metrics.json             # Global statistical metrics & priority distributions
-│   ├── verification_queue.json  # 12 representative human verification checks
-│   ├── dataset.csv              # Full tabular CSV export
-│   └── apps_input.json          # Input seed list of 100 apps across 10 categories
-│
-├── scripts/                     # Pipeline & Dataset Modules
-│   ├── run_research_agent.py    # Main pipeline runner (executes audit, verification & assembly)
-│   ├── validate_schema.py       # JSON schema validator
-│   ├── assemble_html.py         # Dashboard assembler
-│   ├── html_header.py           # Dashboard styling & Tailwind CDN
-│   ├── html_nav_hero.py         # Navigation, Hero section & KPI cards
-│   ├── html_sections.py         # 13 narrative sections, matrix table, and charts
-│   ├── html_footer_script.py    # Drawer JS, Chart.js initializer & terminal simulator
-│   ├── cat1_crm.py to cat10_ai_media.py # 10 category modules (100 grounded apps)
-│   └── compute_metrics.py       # Metrics calculator & CSV exporter
-│
-└── verification/                # Audit & Decision Logs
-    ├── claim_audit.csv          # 342 claim-level facts audited
-    └── human_decisions.csv      # Human review decisions log
+|-- index.html                   # Interactive Case Study & Research Dashboard
+|-- README.md                    # Project documentation & execution guide
+|-- requirements.txt             # Python dependencies
+|-- .env.example                 # Clean environment variable template (no secrets)
+|-- .gitignore                   # Git ignore patterns
+|
+|-- agent/                       # Core Research Agent Codebase
+|   |-- run.py                   # Interactive CLI runner (--app, --category, --verify, --all)
+|   |-- research_agent.py        # Main ComposioResearchAgent orchestrator class
+|   |-- tools.py                 # DocSearchTool, WebScraperTool, and MCPRegistryTool
+|   |-- browser_verifier.py      # Live HTTP portal check & heuristic engine
+|   `-- config.py                # Agent configuration & logging
+|
+|-- data/                        # Datasets & Outputs
+|   |-- results_final.json       # 100 verified structured records with primary evidence
+|   |-- results_pass1.json       # Raw extraction benchmark before calibration
+|   |-- metrics.json             # Global statistical metrics & priority distributions
+|   |-- verification_queue.json  # 12 representative human verification checks
+|   |-- dataset.csv              # Full tabular CSV export
+|   `-- apps_input.json          # Input seed list of 100 apps across 10 categories
+|
+|-- scripts/                     # Pipeline & Dataset Modules
+|   |-- run_research_agent.py    # Main pipeline runner (executes audit, verification & assembly)
+|   |-- validate_schema.py       # JSON schema validator
+|   |-- assemble_html.py         # Dashboard assembler
+|   |-- html_header.py           # Dashboard styling & Tailwind CDN
+|   |-- html_nav_hero.py         # Navigation, Hero section & KPI cards
+|   |-- html_sections.py         # 13 narrative sections, matrix table, and charts
+|   |-- html_footer_script.py    # Drawer JS, Chart.js initializer & terminal simulator
+|   |-- cat1_crm.py to cat10_ai_media.py # 10 category modules (100 grounded apps)
+|   `-- compute_metrics.py       # Metrics calculator & CSV exporter
+|
+`-- verification/                # Audit & Decision Logs
+    |-- claim_audit.csv          # 342 claim-level facts audited
+    `-- human_decisions.csv      # Human review decisions log
 ```
 
 ---
 
-## 📋 JSON Schema Adherence
+## JSON Schema Adherence
 
-Every record in [`data/results_final.json`](data/results_final.json) follows this standardized schema:
+Every record in `data/results_final.json` follows this standardized schema:
 
 ```json
 {
@@ -215,7 +227,7 @@ Every record in [`data/results_final.json`](data/results_final.json) follows thi
 
 ---
 
-## 🛡️ Ground Truth Quality & Non-Hallucination Guarantee
+## Ground Truth Quality & Evidence Guarantee
 
 - **100% Primary Documentation**: Every claim is backed by official developer portal documentation, OpenAPI specs, or vendor repositories.
 - **Two-Pass Verification**: Corrected 12 systematic failure modes (conflating CLI tools with cloud APIs, assuming public docs mean self-serve credentials, missing enterprise admin requirements).
