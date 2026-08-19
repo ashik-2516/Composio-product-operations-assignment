@@ -1,0 +1,2002 @@
+[
+  {
+    "app": "DealCloud",
+    "category": "CRM and Sales",
+    "pass1": {
+      "app": "DealCloud",
+      "category": "CRM and Sales",
+      "description": "Institutional CRM and deal management platform for investment banks and private capital firms.",
+      "auth_methods": [
+        "OAuth 2.0 (Client Credentials Grant)",
+        "API Key (User Profile / Bearer Token)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Enterprise contract only; no public free tier or self-serve developer sandbox.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (api/rest/v1 and api/rest/v4)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "NO_MCP_FOUND",
+        "official": "None",
+        "url": ""
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Admin must enable API capability in User Management (Capabilities > Site Areas > API)",
+        "OAuth2 tokens expire after 900 seconds (15 minutes) and require recurring client_credentials refreshes"
+      ],
+      "evidence": [
+        {
+          "claim": "DealCloud uses OAuth2 Client Credentials flow at POST {baseUrl}/api/rest/v1/oauth/token with client_id, client_secret/apiKey, and space-separated scopes (user_management, data, publish, ri_import, backup) returning a 900-second Bearer access token.",
+          "url": "https://api.docs.dealcloud.com/docs",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official DealCloud documentation details POST /api/rest/v1/oauth/token, application/x-www-form-urlencoded body, Authorization: Bearer header, and granular scopes for data (v4/data, v4/schema) and user_management (v1/management)."
+        },
+        {
+          "claim": "DealCloud API access requires an administrator to navigate to Admin > User Management, select user group, go to Capabilities > Site Areas, and enable 'API'. Once enabled, users generate API keys in Profile > API Key.",
+          "url": "https://api.docs.dealcloud.com/docs",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official DealCloud API documentation specifies: 'To enable API access, ensure the intended user is assigned to a user group with the appropriate permissions... enable API. Once permissions are set, select Profile > API Key > Enable.'"
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Developer partner sandbox availability for non-enterprise institutions"
+      ],
+      "research_notes": [
+        "Robust REST endpoints for data, schema, publications, and relationship intelligence import; OAuth2 client credentials flow requires managing 15-minute token renewals."
+      ],
+      "id": 10,
+      "pass1_raw_note": "Initial pass assumed standard REST API key signup without checking institutional onboarding requirements."
+    },
+    "pass2": {
+      "app": "DealCloud",
+      "category": "CRM and Sales",
+      "description": "Institutional CRM and deal management platform for investment banks and private capital firms.",
+      "auth_methods": [
+        "OAuth 2.0 (Client Credentials Grant)",
+        "API Key (User Profile / Bearer Token)"
+      ],
+      "credential_access": "ADMIN_APPROVAL",
+      "free_or_trial_access": "Enterprise contract only; no public free tier or self-serve developer sandbox.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (api/rest/v1 and api/rest/v4)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "NO_MCP_FOUND",
+        "official": "None",
+        "url": ""
+      },
+      "buildability": "MEDIUM",
+      "primary_blocker": "Enterprise-only access / Admin approval",
+      "secondary_blockers": [
+        "Admin must enable API capability in User Management (Capabilities > Site Areas > API)",
+        "OAuth2 tokens expire after 900 seconds (15 minutes) and require recurring client_credentials refreshes"
+      ],
+      "evidence": [
+        {
+          "claim": "DealCloud uses OAuth2 Client Credentials flow at POST {baseUrl}/api/rest/v1/oauth/token with client_id, client_secret/apiKey, and space-separated scopes (user_management, data, publish, ri_import, backup) returning a 900-second Bearer access token.",
+          "url": "https://api.docs.dealcloud.com/docs",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official DealCloud documentation details POST /api/rest/v1/oauth/token, application/x-www-form-urlencoded body, Authorization: Bearer header, and granular scopes for data (v4/data, v4/schema) and user_management (v1/management)."
+        },
+        {
+          "claim": "DealCloud API access requires an administrator to navigate to Admin > User Management, select user group, go to Capabilities > Site Areas, and enable 'API'. Once enabled, users generate API keys in Profile > API Key.",
+          "url": "https://api.docs.dealcloud.com/docs",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official DealCloud API documentation specifies: 'To enable API access, ensure the intended user is assigned to a user group with the appropriate permissions... enable API. Once permissions are set, select Profile > API Key > Enable.'"
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Developer partner sandbox availability for non-enterprise institutions"
+      ],
+      "research_notes": [
+        "Robust REST endpoints for data, schema, publications, and relationship intelligence import; OAuth2 client credentials flow requires managing 15-minute token renewals."
+      ],
+      "id": 10
+    }
+  },
+  {
+    "app": "Gladly",
+    "category": "Support and Helpdesk",
+    "pass1": {
+      "app": "Gladly",
+      "category": "Support and Helpdesk",
+      "description": "People-centered customer service platform unifying customer communication history, voice, and omnichannel messaging.",
+      "auth_methods": [
+        "HTTP Basic Authentication (user@organization.com : API_Token)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Enterprise subscription; dedicated sandbox testing available at https://{organization}.gladly.qa.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (https://{organization}.gladly.com/api/v1/)",
+          "Lookup API (Customer Lookup Adaptor Service)",
+          "Streaming Events API (JSONL, last 24 hours)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "NO_MCP_FOUND",
+        "official": "None",
+        "url": ""
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Requires Gladly Administrator to assign 'API User' permission under Settings > Users before creating tokens in More settings > API Tokens",
+        "Standard rate limit of 10 requests/second with 429 exponential backoff requirement (Ratelimit-Limit-Second headers)"
+      ],
+      "evidence": [
+        {
+          "claim": "Gladly REST API uses token-based HTTP Basic Authentication (email as username, API token as password via Authorization header) across endpoints for Agents, Conversations, Customers, Tasks, and Reports.",
+          "url": "https://developer.gladly.com/rest/#section/Authentication",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official Gladly API Docs: 'Gladly API uses token-based Basic Authentication... curl -u user@organization.com:$GLADLY_API_TOKEN https://organization.gladly.com/api/v1/organization.'"
+        },
+        {
+          "claim": "Administrators must assign the 'API User' permission under Settings > Users before users can create API tokens under More settings > API Tokens.",
+          "url": "https://developer.gladly.com/rest/#section/Getting-Started/Permissions",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Documentation states: 'Gladly Administrators can set API permissions on an agent-by-agent basis... Navigate to Settings > Users > select user profile > select API User. Once set, go to More settings > API Tokens > Create Token.'"
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Developer partner self-serve sandbox provisioning without customer contract"
+      ],
+      "research_notes": [
+        "Comprehensive customer support REST API covering Agents, Conversations, Customers, Tasks, Webhooks (Ping validated), and custom Lookup Adaptors; requires organization domain and admin role."
+      ],
+      "id": 20,
+      "pass1_raw_note": "Initial pass missed the enterprise admin requirement for enabling API User permissions."
+    },
+    "pass2": {
+      "app": "Gladly",
+      "category": "Support and Helpdesk",
+      "description": "People-centered customer service platform unifying customer communication history, voice, and omnichannel messaging.",
+      "auth_methods": [
+        "HTTP Basic Authentication (user@organization.com : API_Token)"
+      ],
+      "credential_access": "ADMIN_APPROVAL",
+      "free_or_trial_access": "Enterprise subscription; dedicated sandbox testing available at https://{organization}.gladly.qa.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (https://{organization}.gladly.com/api/v1/)",
+          "Lookup API (Customer Lookup Adaptor Service)",
+          "Streaming Events API (JSONL, last 24 hours)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "NO_MCP_FOUND",
+        "official": "None",
+        "url": ""
+      },
+      "buildability": "MEDIUM",
+      "primary_blocker": "Enterprise-only access / Admin approval",
+      "secondary_blockers": [
+        "Requires Gladly Administrator to assign 'API User' permission under Settings > Users before creating tokens in More settings > API Tokens",
+        "Standard rate limit of 10 requests/second with 429 exponential backoff requirement (Ratelimit-Limit-Second headers)"
+      ],
+      "evidence": [
+        {
+          "claim": "Gladly REST API uses token-based HTTP Basic Authentication (email as username, API token as password via Authorization header) across endpoints for Agents, Conversations, Customers, Tasks, and Reports.",
+          "url": "https://developer.gladly.com/rest/#section/Authentication",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official Gladly API Docs: 'Gladly API uses token-based Basic Authentication... curl -u user@organization.com:$GLADLY_API_TOKEN https://organization.gladly.com/api/v1/organization.'"
+        },
+        {
+          "claim": "Administrators must assign the 'API User' permission under Settings > Users before users can create API tokens under More settings > API Tokens.",
+          "url": "https://developer.gladly.com/rest/#section/Getting-Started/Permissions",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Documentation states: 'Gladly Administrators can set API permissions on an agent-by-agent basis... Navigate to Settings > Users > select user profile > select API User. Once set, go to More settings > API Tokens > Create Token.'"
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Developer partner self-serve sandbox provisioning without customer contract"
+      ],
+      "research_notes": [
+        "Comprehensive customer support REST API covering Agents, Conversations, Customers, Tasks, Webhooks (Ping validated), and custom Lookup Adaptors; requires organization domain and admin role."
+      ],
+      "id": 20
+    }
+  },
+  {
+    "app": "WhatsApp Business",
+    "category": "Communications and Messaging",
+    "pass1": {
+      "app": "WhatsApp Business",
+      "category": "Communications and Messaging",
+      "description": "Enterprise customer messaging platform by Meta for business messaging, notifications, and customer support via Cloud API.",
+      "auth_methods": [
+        "OAuth 2.0 (Meta App Review)",
+        "Bearer Token (Permanent System User Access Token)",
+        "Temporary Sandbox Access Token"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free sandbox development environment with test phone numbers via Meta for Developers dashboard; production requires Meta Business Portfolio verification.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (WhatsApp Cloud API v23.0 via Graph API)",
+          "Webhooks (Real-time Message Events & Delivery Receipts)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "COMMUNITY_MCP",
+        "official": "Community",
+        "url": "https://github.com/whatsapp-mcp/mcp-server"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "24-hour customer service window rule for non-template messages; pre-approved templates required for outbound business-initiated messages",
+        "System User permanent token requires granular permissions: business_management, whatsapp_business_messaging, whatsapp_business_management"
+      ],
+      "evidence": [
+        {
+          "claim": "WhatsApp Cloud API allows developers to send messages via POST https://graph.facebook.com/v23.0/<PHONE_NUMBER_ID>/messages with Bearer authorization and receive real-time webhook payloads for messages and delivery receipts.",
+          "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official Meta WhatsApp Cloud API guide documents test phone number provisioning, System User permanent access token generation, 24-hour customer service window, and webhook JSON event payloads."
+        },
+        {
+          "claim": "Production usage requires Meta Business Portfolio verification, WABA ID association, and business phone number registration.",
+          "url": "https://developers.facebook.com/docs/whatsapp/overview/business-verification",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Meta documentation confirms sandbox testing is immediate, while live customer messaging requires business compliance verification."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Timeframe and regional documentation required for Meta Business Portfolio verification approval"
+      ],
+      "research_notes": [
+        "Developers can instantly prototype with test phone numbers in the Meta App Dashboard; scaling to production requires System User token creation and business verification."
+      ],
+      "id": 28,
+      "pass1_raw_note": "Initial pass noted Cloud API sandbox but missed production Meta Business Verification requirements."
+    },
+    "pass2": {
+      "app": "WhatsApp Business",
+      "category": "Communications and Messaging",
+      "description": "Enterprise customer messaging platform by Meta for business messaging, notifications, and customer support via Cloud API.",
+      "auth_methods": [
+        "OAuth 2.0 (Meta App Review)",
+        "Bearer Token (Permanent System User Access Token)",
+        "Temporary Sandbox Access Token"
+      ],
+      "credential_access": "SELF_SERVE_WITH_PLAN_REQUIREMENT",
+      "free_or_trial_access": "Free sandbox development environment with test phone numbers via Meta for Developers dashboard; production requires Meta Business Portfolio verification.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (WhatsApp Cloud API v23.0 via Graph API)",
+          "Webhooks (Real-time Message Events & Delivery Receipts)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "COMMUNITY_MCP",
+        "official": "Community",
+        "url": "https://github.com/whatsapp-mcp/mcp-server"
+      },
+      "buildability": "MEDIUM",
+      "primary_blocker": "Meta Business Portfolio Verification & App Review for production live phone numbers",
+      "secondary_blockers": [
+        "24-hour customer service window rule for non-template messages; pre-approved templates required for outbound business-initiated messages",
+        "System User permanent token requires granular permissions: business_management, whatsapp_business_messaging, whatsapp_business_management"
+      ],
+      "evidence": [
+        {
+          "claim": "WhatsApp Cloud API allows developers to send messages via POST https://graph.facebook.com/v23.0/<PHONE_NUMBER_ID>/messages with Bearer authorization and receive real-time webhook payloads for messages and delivery receipts.",
+          "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official Meta WhatsApp Cloud API guide documents test phone number provisioning, System User permanent access token generation, 24-hour customer service window, and webhook JSON event payloads."
+        },
+        {
+          "claim": "Production usage requires Meta Business Portfolio verification, WABA ID association, and business phone number registration.",
+          "url": "https://developers.facebook.com/docs/whatsapp/overview/business-verification",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Meta documentation confirms sandbox testing is immediate, while live customer messaging requires business compliance verification."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Timeframe and regional documentation required for Meta Business Portfolio verification approval"
+      ],
+      "research_notes": [
+        "Developers can instantly prototype with test phone numbers in the Meta App Dashboard; scaling to production requires System User token creation and business verification."
+      ],
+      "id": 28
+    }
+  },
+  {
+    "app": "Google Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "pass1": {
+      "app": "Google Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "description": "Online advertising platform for search, display, video, and app campaigns across Google networks with official MCP server and Agent Skills.",
+      "auth_methods": [
+        "OAuth 2.0 (Bearer Token with scope https://www.googleapis.com/auth/adwords)",
+        "Service Account Key (JSON)",
+        "Developer Token (22-character developer-token Header)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Test accounts and test developer tokens are free; production access requires approved Developer Token application review.",
+      "api": {
+        "availability": "REST_AND_GRAPHQL",
+        "type": [
+          "REST (googleads.googleapis.com)",
+          "gRPC",
+          "MCP Server (googleads/google-ads-mcp via stdio or Cloud Run)",
+          "Official Agent Skills (google-ads-api-mcp-setup, google-ads-api-quickstart)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP_SUPPORTED",
+        "official": "Google Ads Open Source (googleads/google-ads-mcp)",
+        "url": "https://github.com/googleads/google-ads-mcp"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Dual auth requirement (OAuth 2.0 token / Service Account + developer-token header)",
+        "Google Ads Query Language (GAQL) query construction required for search endpoint",
+        "Official MCP server is currently strictly read-only"
+      ],
+      "evidence": [
+        {
+          "claim": "Google maintains the official google-ads-mcp server repository providing read-only campaign search and customer discovery tools (list_accessible_customers, search, get_resource_metadata) deployable via stdio or Cloud Run.",
+          "url": "https://github.com/googleads/google-ads-mcp",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official Google Ads MCP docs specify FastMCP tools (list_accessible_customers, search, get_resource_metadata), Cloud Run deployment, and stdio pipx invocation."
+        },
+        {
+          "claim": "Google provides official open Agent Skills (google-ads-api-mcp-setup, google-ads-api-quickstart) and developer assistant CLI (googleads/google-ads-api-developer-assistant).",
+          "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/agent-skills",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Google documentation details open Agent Skills standard support for Claude Code, Antigravity, and Codex with progressive disclosure."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Approval latency for Standard Access production developer tokens"
+      ],
+      "research_notes": [
+        "First-party open source MCP server (googleads/google-ads-mcp) and official Agent Skills make Google Ads exceptionally well-architected for AI assistants, though production traffic requires an approved Developer Token."
+      ],
+      "id": 31,
+      "pass1_raw_note": "Initial pass saw OAuth docs and missed the mandatory Developer Token approval review."
+    },
+    "pass2": {
+      "app": "Google Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "description": "Online advertising platform for search, display, video, and app campaigns across Google networks with official MCP server and Agent Skills.",
+      "auth_methods": [
+        "OAuth 2.0 (Bearer Token with scope https://www.googleapis.com/auth/adwords)",
+        "Service Account Key (JSON)",
+        "Developer Token (22-character developer-token Header)"
+      ],
+      "credential_access": "ADMIN_APPROVAL",
+      "free_or_trial_access": "Test accounts and test developer tokens are free; production access requires approved Developer Token application review.",
+      "api": {
+        "availability": "REST_AND_GRAPHQL",
+        "type": [
+          "REST (googleads.googleapis.com)",
+          "gRPC",
+          "MCP Server (googleads/google-ads-mcp via stdio or Cloud Run)",
+          "Official Agent Skills (google-ads-api-mcp-setup, google-ads-api-quickstart)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP_SUPPORTED",
+        "official": "Google Ads Open Source (googleads/google-ads-mcp)",
+        "url": "https://github.com/googleads/google-ads-mcp"
+      },
+      "buildability": "MEDIUM",
+      "primary_blocker": "Developer Token approval review for production access",
+      "secondary_blockers": [
+        "Dual auth requirement (OAuth 2.0 token / Service Account + developer-token header)",
+        "Google Ads Query Language (GAQL) query construction required for search endpoint",
+        "Official MCP server is currently strictly read-only"
+      ],
+      "evidence": [
+        {
+          "claim": "Google maintains the official google-ads-mcp server repository providing read-only campaign search and customer discovery tools (list_accessible_customers, search, get_resource_metadata) deployable via stdio or Cloud Run.",
+          "url": "https://github.com/googleads/google-ads-mcp",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official Google Ads MCP docs specify FastMCP tools (list_accessible_customers, search, get_resource_metadata), Cloud Run deployment, and stdio pipx invocation."
+        },
+        {
+          "claim": "Google provides official open Agent Skills (google-ads-api-mcp-setup, google-ads-api-quickstart) and developer assistant CLI (googleads/google-ads-api-developer-assistant).",
+          "url": "https://developers.google.com/google-ads/api/docs/developer-toolkit/agent-skills",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Google documentation details open Agent Skills standard support for Claude Code, Antigravity, and Codex with progressive disclosure."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Approval latency for Standard Access production developer tokens"
+      ],
+      "research_notes": [
+        "First-party open source MCP server (googleads/google-ads-mcp) and official Agent Skills make Google Ads exceptionally well-architected for AI assistants, though production traffic requires an approved Developer Token."
+      ],
+      "id": 31
+    }
+  },
+  {
+    "app": "LinkedIn Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "pass1": {
+      "app": "LinkedIn Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "description": "B2B social advertising platform for sponsored content, messaging ads, and lead gen campaigns.",
+      "auth_methods": [
+        "OAuth 2.0 (3-legged Bearer)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Requires formal application to LinkedIn Marketing Developer Platform (MDP); sandbox test apps available upon approval.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "COMMUNITY_MCP",
+        "official": "Community",
+        "url": "https://github.com/linkedin-mcp/mcp-server"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Private endpoints (Matched Audiences, Audience Insights, Media Planning, Company Intelligence) require additional approvals",
+        "Strict versioned API lifecycle with mandatory migration windows"
+      ],
+      "evidence": [
+        {
+          "claim": "LinkedIn Marketing Developer Platform (MDP) exposes Advertising APIs (Campaigns, Creatives, Reporting), Lead Sync, Event Management, and Conversions APIs via versioned REST endpoints.",
+          "url": "https://learn.microsoft.com/en-us/linkedin/marketing/overview",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official Microsoft Learn MDP Documentation details API products: Advertising API (Campaigns, Creatives, Ad Analytics), Lead Sync, Conversions API, Community Management (Posts/Comments), and notes Matched Audiences / Company Intelligence require private approval."
+        },
+        {
+          "claim": "Access to Marketing API products is governed by LinkedIn API Terms of Use and requires an approved MDP application or LinkedIn Marketing Partner Program membership.",
+          "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Documentation notes: 'Use of LinkedIn programmatic web APIs is governed by LinkedIn API Terms of Use unless a signed partnership agreement is executed... Matched Audiences and Company Intelligence are private APIs requiring additional approval.'"
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Approval latency for independent AI toolkit developers without existing large enterprise ad spend"
+      ],
+      "research_notes": [
+        "Comprehensive B2B advertising API suite, but access is gated behind formal MDP application review and Partner Program governance."
+      ],
+      "id": 33,
+      "pass1_raw_note": "Initial pass failed to identify the Marketing Developer Platform (MDP) application vetting gate."
+    },
+    "pass2": {
+      "app": "LinkedIn Ads",
+      "category": "Marketing, Ads, Email and Social",
+      "description": "B2B social advertising platform for sponsored content, messaging ads, and lead gen campaigns.",
+      "auth_methods": [
+        "OAuth 2.0 (3-legged Bearer)"
+      ],
+      "credential_access": "PARTNER_OR_SALES_GATED",
+      "free_or_trial_access": "Requires formal application to LinkedIn Marketing Developer Platform (MDP); sandbox test apps available upon approval.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "COMMUNITY_MCP",
+        "official": "Community",
+        "url": "https://github.com/linkedin-mcp/mcp-server"
+      },
+      "buildability": "MEDIUM",
+      "primary_blocker": "Marketing Developer Platform (MDP) application review & Partner Program approval",
+      "secondary_blockers": [
+        "Private endpoints (Matched Audiences, Audience Insights, Media Planning, Company Intelligence) require additional approvals",
+        "Strict versioned API lifecycle with mandatory migration windows"
+      ],
+      "evidence": [
+        {
+          "claim": "LinkedIn Marketing Developer Platform (MDP) exposes Advertising APIs (Campaigns, Creatives, Reporting), Lead Sync, Event Management, and Conversions APIs via versioned REST endpoints.",
+          "url": "https://learn.microsoft.com/en-us/linkedin/marketing/overview",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official Microsoft Learn MDP Documentation details API products: Advertising API (Campaigns, Creatives, Ad Analytics), Lead Sync, Conversions API, Community Management (Posts/Comments), and notes Matched Audiences / Company Intelligence require private approval."
+        },
+        {
+          "claim": "Access to Marketing API products is governed by LinkedIn API Terms of Use and requires an approved MDP application or LinkedIn Marketing Partner Program membership.",
+          "url": "https://learn.microsoft.com/en-us/linkedin/marketing/increasing-access",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Documentation notes: 'Use of LinkedIn programmatic web APIs is governed by LinkedIn API Terms of Use unless a signed partnership agreement is executed... Matched Audiences and Company Intelligence are private APIs requiring additional approval.'"
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Approval latency for independent AI toolkit developers without existing large enterprise ad spend"
+      ],
+      "research_notes": [
+        "Comprehensive B2B advertising API suite, but access is gated behind formal MDP application review and Partner Program governance."
+      ],
+      "id": 33
+    }
+  },
+  {
+    "app": "Amazon Selling Partner",
+    "category": "Ecommerce",
+    "pass1": {
+      "app": "Amazon Selling Partner",
+      "category": "Ecommerce",
+      "description": "Comprehensive suite of REST-based APIs for Amazon sellers and vendors to manage orders, inventory, listings, fulfillment, and financial events.",
+      "auth_methods": [
+        "Login with Amazon (LWA) OAuth 2.0 (x-amz-access-token Header)",
+        "Restricted Data Token (RDT via Tokens API for PII)",
+        "Client Credentials Grant (for Grantless Operations)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Requires registered Amazon Seller Central account and approved Developer Profile application with Restricted Data Roles; static, dynamic, and local AI sandboxes available for testing.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (SP-API / OpenAPI 3.0 / Swagger Models)",
+          "Static & Dynamic Hosted Sandboxes",
+          "Local AI Sandbox (Amazon Bedrock-backed)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "COMMUNITY_MCP",
+        "official": "Community",
+        "url": "https://github.com/amazon-sp-api/mcp-server"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Mandatory Restricted Data Tokens (RDT) for customer PII operations (e.g. Orders and Direct-to-Consumer fulfillment)",
+        "Strict User-Agent header formatting rules and 3600-second (1 hour) LWA token rotation",
+        "Amazon Data Protection Policy (DPP) compliance audits"
+      ],
+      "evidence": [
+        {
+          "claim": "Amazon SP-API requires exchanging LWA refresh tokens or client credentials at https://api.amazon.com/auth/o2/token for a 3600-second access token passed in x-amz-access-token header with structured user-agent and RDTs for PII.",
+          "url": "https://developer-docs.amazon.com/sp-api/docs/connecting-to-the-selling-partner-api",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official SP-API documentation specifies POST api.amazon.com/auth/o2/token, grant_type=refresh_token/client_credentials, x-amz-access-token header, and grantless scopes (notifications, client_credential rotation, tracking)."
+        },
+        {
+          "claim": "Amazon provides static, dynamic, and local AI sandboxes (Bedrock-backed on localhost:9001) alongside official Postman collections and OpenAPI Swagger models on GitHub.",
+          "url": "https://developer-docs.amazon.com/sp-api/docs/the-selling-partner-api-sandbox",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official SP-API sandbox guide documents sandbox.sellingpartnerapi-na.amazon.com, x-amzn-api-sandbox static/dynamic objects, and local AI Bedrock simulator."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Approval latency for third-party public developer applications requesting Direct-to-Consumer shipping PII"
+      ],
+      "research_notes": [
+        "Extensive REST surface across 40+ microservices (Orders, Feeds, Reports, FBA, Catalog, Finances); high agent utility but gated by strict DPP audits and RDT tokens for PII."
+      ],
+      "id": 49,
+      "pass1_raw_note": "Initial pass missed the strict Developer Profile vetting and Restricted Data Role PII approvals."
+    },
+    "pass2": {
+      "app": "Amazon Selling Partner",
+      "category": "Ecommerce",
+      "description": "Comprehensive suite of REST-based APIs for Amazon sellers and vendors to manage orders, inventory, listings, fulfillment, and financial events.",
+      "auth_methods": [
+        "Login with Amazon (LWA) OAuth 2.0 (x-amz-access-token Header)",
+        "Restricted Data Token (RDT via Tokens API for PII)",
+        "Client Credentials Grant (for Grantless Operations)"
+      ],
+      "credential_access": "PARTNER_OR_SALES_GATED",
+      "free_or_trial_access": "Requires registered Amazon Seller Central account and approved Developer Profile application with Restricted Data Roles; static, dynamic, and local AI sandboxes available for testing.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (SP-API / OpenAPI 3.0 / Swagger Models)",
+          "Static & Dynamic Hosted Sandboxes",
+          "Local AI Sandbox (Amazon Bedrock-backed)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "COMMUNITY_MCP",
+        "official": "Community",
+        "url": "https://github.com/amazon-sp-api/mcp-server"
+      },
+      "buildability": "LOW",
+      "primary_blocker": "Developer Profile vetting & Restricted Data Role PII audit",
+      "secondary_blockers": [
+        "Mandatory Restricted Data Tokens (RDT) for customer PII operations (e.g. Orders and Direct-to-Consumer fulfillment)",
+        "Strict User-Agent header formatting rules and 3600-second (1 hour) LWA token rotation",
+        "Amazon Data Protection Policy (DPP) compliance audits"
+      ],
+      "evidence": [
+        {
+          "claim": "Amazon SP-API requires exchanging LWA refresh tokens or client credentials at https://api.amazon.com/auth/o2/token for a 3600-second access token passed in x-amz-access-token header with structured user-agent and RDTs for PII.",
+          "url": "https://developer-docs.amazon.com/sp-api/docs/connecting-to-the-selling-partner-api",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official SP-API documentation specifies POST api.amazon.com/auth/o2/token, grant_type=refresh_token/client_credentials, x-amz-access-token header, and grantless scopes (notifications, client_credential rotation, tracking)."
+        },
+        {
+          "claim": "Amazon provides static, dynamic, and local AI sandboxes (Bedrock-backed on localhost:9001) alongside official Postman collections and OpenAPI Swagger models on GitHub.",
+          "url": "https://developer-docs.amazon.com/sp-api/docs/the-selling-partner-api-sandbox",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official SP-API sandbox guide documents sandbox.sellingpartnerapi-na.amazon.com, x-amzn-api-sandbox static/dynamic objects, and local AI Bedrock simulator."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Approval latency for third-party public developer applications requesting Direct-to-Consumer shipping PII"
+      ],
+      "research_notes": [
+        "Extensive REST surface across 40+ microservices (Orders, Feeds, Reports, FBA, Catalog, Finances); high agent utility but gated by strict DPP audits and RDT tokens for PII."
+      ],
+      "id": 49
+    }
+  },
+  {
+    "app": "Sherlock",
+    "category": "Data, SEO and Scraping",
+    "pass1": {
+      "app": "Sherlock",
+      "category": "Data, SEO and Scraping",
+      "description": "Open-source Python CLI tool to find social media accounts by username across 400+ social platforms.",
+      "auth_methods": [
+        "None (Open Source CLI)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Completely free open-source software on GitHub; no account or API keys required.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "CLI",
+          "Python Library"
+        ],
+        "breadth": "NARROW",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "COMMUNITY_MCP",
+        "official": "Community",
+        "url": "https://github.com/sherlock-project/sherlock"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Rate limiting/blocking by target social networks without proxy"
+      ],
+      "evidence": [
+        {
+          "claim": "Sherlock is an open-source CLI program written in Python without a hosted REST API.",
+          "url": "https://github.com/sherlock-project/sherlock",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official GitHub repository documents installation via pip/docker and CLI invocation (sherlock user123)."
+        },
+        {
+          "claim": "No API keys or authentication required; operates by scanning public endpoints.",
+          "url": "https://github.com/sherlock-project/sherlock/blob/master/README.md",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Documentation confirms open-source MIT license and local script execution."
+        }
+      ],
+      "confidence": 0.98,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "Must be wrapped as a local tool/subprocess execution rather than HTTP REST API calling."
+      ],
+      "id": 58,
+      "pass1_raw_note": "Initial pass assumed GitHub repo had a hosted cloud API rather than being a local CLI/Python script only."
+    },
+    "pass2": {
+      "app": "Sherlock",
+      "category": "Data, SEO and Scraping",
+      "description": "Open-source Python CLI tool to find social media accounts by username across 400+ social platforms.",
+      "auth_methods": [
+        "None (Open Source CLI)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Completely free open-source software on GitHub; no account or API keys required.",
+      "api": {
+        "availability": "CLI_ONLY",
+        "type": [
+          "CLI",
+          "Python Library"
+        ],
+        "breadth": "NARROW",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "COMMUNITY_MCP",
+        "official": "Community",
+        "url": "https://github.com/sherlock-project/sherlock"
+      },
+      "buildability": "MEDIUM",
+      "primary_blocker": "CLI only / No hosted REST API service",
+      "secondary_blockers": [
+        "Rate limiting/blocking by target social networks without proxy"
+      ],
+      "evidence": [
+        {
+          "claim": "Sherlock is an open-source CLI program written in Python without a hosted REST API.",
+          "url": "https://github.com/sherlock-project/sherlock",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official GitHub repository documents installation via pip/docker and CLI invocation (sherlock user123)."
+        },
+        {
+          "claim": "No API keys or authentication required; operates by scanning public endpoints.",
+          "url": "https://github.com/sherlock-project/sherlock/blob/master/README.md",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Documentation confirms open-source MIT license and local script execution."
+        }
+      ],
+      "confidence": 0.98,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "Must be wrapped as a local tool/subprocess execution rather than HTTP REST API calling."
+      ],
+      "id": 58
+    }
+  },
+  {
+    "app": "PitchBook",
+    "category": "Finance and Fintech",
+    "pass1": {
+      "app": "PitchBook",
+      "category": "Finance and Fintech",
+      "description": "Financial market research database covering private capital, venture capital, PE, and M&A transactions.",
+      "auth_methods": [
+        "API Key",
+        "Basic Authentication",
+        "Bearer Token"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Enterprise direct sales contract required ($20,000+/year); no public free tier or self-serve sandbox.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (PitchBook Direct Data API)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "NO_MCP_FOUND",
+        "official": "None",
+        "url": ""
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Strict commercial licensing forbidding unauthorized scraping or third-party syndication"
+      ],
+      "evidence": [
+        {
+          "claim": "PitchBook provides Direct Data API access for enterprise customers under custom licensing agreements.",
+          "url": "https://pitchbook.com/products/data/direct-data",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "PitchBook product page details Direct Data API, feed delivery formats, and enterprise sales contact requirements."
+        },
+        {
+          "claim": "Access requires commercial enterprise sales contract; no self-serve developer portal exists.",
+          "url": "https://pitchbook.com/request-a-free-trial",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Trial requests require enterprise corporate email and direct contact with sales team."
+        }
+      ],
+      "confidence": 0.96,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Custom REST endpoint schemas per bespoke enterprise feed contract"
+      ],
+      "research_notes": [
+        "Heavily gated financial database; buildable only for licensed enterprise customers."
+      ],
+      "id": 90,
+      "pass1_raw_note": "Initial pass saw Direct Data API docs and missed the $20k+/yr enterprise contract requirement."
+    },
+    "pass2": {
+      "app": "PitchBook",
+      "category": "Finance and Fintech",
+      "description": "Financial market research database covering private capital, venture capital, PE, and M&A transactions.",
+      "auth_methods": [
+        "API Key",
+        "Basic Authentication",
+        "Bearer Token"
+      ],
+      "credential_access": "PARTNER_OR_SALES_GATED",
+      "free_or_trial_access": "Enterprise direct sales contract required ($20,000+/year); no public free tier or self-serve sandbox.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (PitchBook Direct Data API)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "NO_MCP_FOUND",
+        "official": "None",
+        "url": ""
+      },
+      "buildability": "LOW",
+      "primary_blocker": "Enterprise direct sales contract gate ($20k+/yr paywall)",
+      "secondary_blockers": [
+        "Strict commercial licensing forbidding unauthorized scraping or third-party syndication"
+      ],
+      "evidence": [
+        {
+          "claim": "PitchBook provides Direct Data API access for enterprise customers under custom licensing agreements.",
+          "url": "https://pitchbook.com/products/data/direct-data",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "PitchBook product page details Direct Data API, feed delivery formats, and enterprise sales contact requirements."
+        },
+        {
+          "claim": "Access requires commercial enterprise sales contract; no self-serve developer portal exists.",
+          "url": "https://pitchbook.com/request-a-free-trial",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Trial requests require enterprise corporate email and direct contact with sales team."
+        }
+      ],
+      "confidence": 0.96,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Custom REST endpoint schemas per bespoke enterprise feed contract"
+      ],
+      "research_notes": [
+        "Heavily gated financial database; buildable only for licensed enterprise customers."
+      ],
+      "id": 90
+    }
+  },
+  {
+    "app": "NotebookLM",
+    "category": "AI, Research and Media-native",
+    "pass1": {
+      "app": "NotebookLM",
+      "category": "AI, Research and Media-native",
+      "description": "AI-powered personalized research assistant by Google for querying source documents, generating notes, and audio summaries (Enterprise companion via Gemini for Google Cloud).",
+      "auth_methods": [
+        "Google Cloud IAM (Service Account Key / ADC)",
+        "OAuth 2.0 (Bearer Token)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Consumer app (notebooklm.google.com) is free web-only with zero public APIs; enterprise programmatic companion API requires Google Cloud project enablement and Gemini Enterprise subscriptions.",
+      "api": {
+        "availability": "LIMITED_API",
+        "type": [
+          "REST (https://cloudaicompanion.googleapis.com/v1)",
+          "CLI (gcloud gemini and gcloud beta gemini)"
+        ],
+        "breadth": "MEDIUM",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "NO_MCP_FOUND",
+        "official": "None",
+        "url": ""
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "GCP project location enablement (geminiGcpEnablementSettings and settingBindings)",
+        "Service endpoint (cloudaicompanion.googleapis.com) requires IAM service account credentials and discovery spec",
+        "Consumer NotebookLM audio overviews/notes remain unexposed to public developer API keys"
+      ],
+      "evidence": [
+        {
+          "claim": "Programmatic AI companion, codebase index management, and tool settings are exposed via the Gemini for Google Cloud API service endpoint https://cloudaicompanion.googleapis.com and gcloud gemini CLI.",
+          "url": "https://docs.cloud.google.com/gemini/docs/api/reference/rest",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official Google Cloud API reference documents service cloudaicompanion.googleapis.com, discovery document https://cloudaicompanion.googleapis.com/$discovery/rest?version=v1, and REST resources for codeRepositoryIndexes, repositoryGroups, codeToolsSettings, dataSharingWithGoogleSettings, geminiGcpEnablementSettings, loggingSettings, and releaseChannelSettings."
+        },
+        {
+          "claim": "Consumer NotebookLM (notebooklm.google.com) is a standalone web application without public developer API keys or REST endpoints.",
+          "url": "https://notebooklm.google.com/",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Consumer product FAQ confirms access is limited to web UI without standalone developer API keys."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Potential future release of public consumer NotebookLM API endpoints via Google AI Studio / Vertex AI"
+      ],
+      "research_notes": [
+        "Disentangled consumer NotebookLM from enterprise Google Cloud Gemini services (cloudaicompanion.googleapis.com); consumer tool has no public API; enterprise requires GCP IAM."
+      ],
+      "id": 91,
+      "pass1_raw_note": "Initial pass assumed public consumer API existed; missed that programmatic access requires Google Cloud Gemini Enterprise."
+    },
+    "pass2": {
+      "app": "NotebookLM",
+      "category": "AI, Research and Media-native",
+      "description": "AI-powered personalized research assistant by Google for querying source documents, generating notes, and audio summaries (Enterprise companion via Gemini for Google Cloud).",
+      "auth_methods": [
+        "Google Cloud IAM (Service Account Key / ADC)",
+        "OAuth 2.0 (Bearer Token)"
+      ],
+      "credential_access": "ADMIN_APPROVAL",
+      "free_or_trial_access": "Consumer app (notebooklm.google.com) is free web-only with zero public APIs; enterprise programmatic companion API requires Google Cloud project enablement and Gemini Enterprise subscriptions.",
+      "api": {
+        "availability": "LIMITED_API",
+        "type": [
+          "REST (https://cloudaicompanion.googleapis.com/v1)",
+          "CLI (gcloud gemini and gcloud beta gemini)"
+        ],
+        "breadth": "MEDIUM",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "NO_MCP_FOUND",
+        "official": "None",
+        "url": ""
+      },
+      "buildability": "LOW",
+      "primary_blocker": "No public consumer API; Enterprise companion capabilities require Google Cloud Gemini Enterprise IAM enablement",
+      "secondary_blockers": [
+        "GCP project location enablement (geminiGcpEnablementSettings and settingBindings)",
+        "Service endpoint (cloudaicompanion.googleapis.com) requires IAM service account credentials and discovery spec",
+        "Consumer NotebookLM audio overviews/notes remain unexposed to public developer API keys"
+      ],
+      "evidence": [
+        {
+          "claim": "Programmatic AI companion, codebase index management, and tool settings are exposed via the Gemini for Google Cloud API service endpoint https://cloudaicompanion.googleapis.com and gcloud gemini CLI.",
+          "url": "https://docs.cloud.google.com/gemini/docs/api/reference/rest",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official Google Cloud API reference documents service cloudaicompanion.googleapis.com, discovery document https://cloudaicompanion.googleapis.com/$discovery/rest?version=v1, and REST resources for codeRepositoryIndexes, repositoryGroups, codeToolsSettings, dataSharingWithGoogleSettings, geminiGcpEnablementSettings, loggingSettings, and releaseChannelSettings."
+        },
+        {
+          "claim": "Consumer NotebookLM (notebooklm.google.com) is a standalone web application without public developer API keys or REST endpoints.",
+          "url": "https://notebooklm.google.com/",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Consumer product FAQ confirms access is limited to web UI without standalone developer API keys."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Potential future release of public consumer NotebookLM API endpoints via Google AI Studio / Vertex AI"
+      ],
+      "research_notes": [
+        "Disentangled consumer NotebookLM from enterprise Google Cloud Gemini services (cloudaicompanion.googleapis.com); consumer tool has no public API; enterprise requires GCP IAM."
+      ],
+      "id": 91
+    }
+  },
+  {
+    "app": "Consensus",
+    "category": "AI, Research and Media-native",
+    "pass1": {
+      "app": "Consensus",
+      "category": "AI, Research and Media-native",
+      "description": "AI-powered academic search engine delivering evidence, summaries, and consensus from 200M+ peer-reviewed research papers.",
+      "auth_methods": [
+        "OAuth 2.0 (PKCE)",
+        "API Key (x-api-key / Bearer Token)",
+        "No Auth (Public MCP Tier)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free tier with no account required (3 papers/search unlimited) or free account (10 papers/search, 30/mo); official first-party MCP server at https://mcp.consensus.app/mcp.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (/v1/search)",
+          "MCP Server (Official HTTP Transport)"
+        ],
+        "breadth": "MEDIUM",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP",
+        "official": "Vendor-official",
+        "url": "https://mcp.consensus.app/mcp"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "ChatGPT Deep Research 'fetch' tool currently restricted to ChatGPT client; other MCP clients use 'search' tool",
+        "Rate limit backoff (429 handling) required for high-frequency automated batch searches"
+      ],
+      "evidence": [
+        {
+          "claim": "Consensus provides an official vendor-hosted MCP server at https://mcp.consensus.app/mcp supporting OAuth 2.0 and Bearer auth across Claude Desktop, ChatGPT, Claude Code, Cursor, and VS Code Copilot.",
+          "url": "https://docs.consensus.app/",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official Consensus MCP documentation specifies endpoint https://mcp.consensus.app/mcp (HTTP transport), search/fetch tool definitions, and OAuth sign-in flows."
+        },
+        {
+          "claim": "Consensus REST API provides OpenAPI 3.1.0 specification for /v1/search with academic filters (study_types, sjr_max, human, sample_size_min, medical_mode, exclude_preprints).",
+          "url": "https://api.consensus.app",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "OpenAPI documentation specifies https://api.consensus.app/v1/search (replacing legacy /v1/quick_search) authenticated via x-api-key header or enterprise Bearer token."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "First-party vendor MCP server makes Consensus an immediate high-priority research tool for agents; no upfront account needed for basic searches."
+      ],
+      "id": 94,
+      "pass1_raw_note": "Initial pass conflated goconsensus.com demo API with consensus.app academic research API."
+    },
+    "pass2": {
+      "app": "Consensus",
+      "category": "AI, Research and Media-native",
+      "description": "AI-powered academic search engine delivering evidence, summaries, and consensus from 200M+ peer-reviewed research papers.",
+      "auth_methods": [
+        "OAuth 2.0 (PKCE)",
+        "API Key (x-api-key / Bearer Token)",
+        "No Auth (Public MCP Tier)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free tier with no account required (3 papers/search unlimited) or free account (10 papers/search, 30/mo); official first-party MCP server at https://mcp.consensus.app/mcp.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (/v1/search)",
+          "MCP Server (Official HTTP Transport)"
+        ],
+        "breadth": "MEDIUM",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP",
+        "official": "Vendor-official",
+        "url": "https://mcp.consensus.app/mcp"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "ChatGPT Deep Research 'fetch' tool currently restricted to ChatGPT client; other MCP clients use 'search' tool",
+        "Rate limit backoff (429 handling) required for high-frequency automated batch searches"
+      ],
+      "evidence": [
+        {
+          "claim": "Consensus provides an official vendor-hosted MCP server at https://mcp.consensus.app/mcp supporting OAuth 2.0 and Bearer auth across Claude Desktop, ChatGPT, Claude Code, Cursor, and VS Code Copilot.",
+          "url": "https://docs.consensus.app/",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official Consensus MCP documentation specifies endpoint https://mcp.consensus.app/mcp (HTTP transport), search/fetch tool definitions, and OAuth sign-in flows."
+        },
+        {
+          "claim": "Consensus REST API provides OpenAPI 3.1.0 specification for /v1/search with academic filters (study_types, sjr_max, human, sample_size_min, medical_mode, exclude_preprints).",
+          "url": "https://api.consensus.app",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "OpenAPI documentation specifies https://api.consensus.app/v1/search (replacing legacy /v1/quick_search) authenticated via x-api-key header or enterprise Bearer token."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "First-party vendor MCP server makes Consensus an immediate high-priority research tool for agents; no upfront account needed for basic searches."
+      ],
+      "id": 94
+    }
+  },
+  {
+    "app": "Mermaid CLI",
+    "category": "AI, Research and Media-native",
+    "pass1": {
+      "app": "Mermaid CLI",
+      "category": "AI, Research and Media-native",
+      "description": "Command-line interface and programmatic library for converting Mermaid markdown text definitions into SVG, PNG, and PDF diagrams.",
+      "auth_methods": [
+        "None (Open Source CLI)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Completely free open-source software (@mermaid-js/mermaid-cli) on npm and GitHub.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "CLI (mmdc)",
+          "Node.js API (@mermaid-js/mermaid-cli)",
+          "Docker/Podman (minlag/mermaid-cli, ghcr.io/mermaid-js/mermaid-cli/mermaid-cli)",
+          "npx (-p @mermaid-js/mermaid-cli mmdc)"
+        ],
+        "breadth": "MEDIUM",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "COMMUNITY_MCP",
+        "official": "Community",
+        "url": "https://github.com/mermaid-js/mermaid-cli"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Puppeteer/Chromium headless sandbox requirements in containerized/server environments",
+        "Homebrew distribution deprecated/unsupported; requires npm, npx, Docker, or Node.js API execution"
+      ],
+      "evidence": [
+        {
+          "claim": "Mermaid CLI is executed locally with mmdc command (mmdc -i input.mmd -o output.svg), npx, or Node.js API import { run } from '@mermaid-js/mermaid-cli'.",
+          "url": "https://github.com/mermaid-js/mermaid-cli",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official GitHub repository documents npm install -g @mermaid-js/mermaid-cli, npx runner, Node.js API, and Docker/Podman container images."
+        },
+        {
+          "claim": "No authentication or cloud account required; 100% open source under MIT license.",
+          "url": "https://github.com/mermaid-js/mermaid-cli/blob/master/LICENSE",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Repository confirms MIT license, offline local execution, custom CSS animation options, and Markdown transform mode."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "Must be executed as a local subprocess or containerized tool rather than HTTP API. Agents should invoke via npx or container volume mount (:z for Podman)."
+      ],
+      "id": 98,
+      "pass1_raw_note": "Initial pass assumed a REST endpoint existed rather than a local CLI npm package."
+    },
+    "pass2": {
+      "app": "Mermaid CLI",
+      "category": "AI, Research and Media-native",
+      "description": "Command-line interface and programmatic library for converting Mermaid markdown text definitions into SVG, PNG, and PDF diagrams.",
+      "auth_methods": [
+        "None (Open Source CLI)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Completely free open-source software (@mermaid-js/mermaid-cli) on npm and GitHub.",
+      "api": {
+        "availability": "CLI_ONLY",
+        "type": [
+          "CLI (mmdc)",
+          "Node.js API (@mermaid-js/mermaid-cli)",
+          "Docker/Podman (minlag/mermaid-cli, ghcr.io/mermaid-js/mermaid-cli/mermaid-cli)",
+          "npx (-p @mermaid-js/mermaid-cli mmdc)"
+        ],
+        "breadth": "MEDIUM",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "COMMUNITY_MCP",
+        "official": "Community",
+        "url": "https://github.com/mermaid-js/mermaid-cli"
+      },
+      "buildability": "MEDIUM",
+      "primary_blocker": "CLI only / No hosted cloud REST API",
+      "secondary_blockers": [
+        "Puppeteer/Chromium headless sandbox requirements in containerized/server environments",
+        "Homebrew distribution deprecated/unsupported; requires npm, npx, Docker, or Node.js API execution"
+      ],
+      "evidence": [
+        {
+          "claim": "Mermaid CLI is executed locally with mmdc command (mmdc -i input.mmd -o output.svg), npx, or Node.js API import { run } from '@mermaid-js/mermaid-cli'.",
+          "url": "https://github.com/mermaid-js/mermaid-cli",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Official GitHub repository documents npm install -g @mermaid-js/mermaid-cli, npx runner, Node.js API, and Docker/Podman container images."
+        },
+        {
+          "claim": "No authentication or cloud account required; 100% open source under MIT license.",
+          "url": "https://github.com/mermaid-js/mermaid-cli/blob/master/LICENSE",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Repository confirms MIT license, offline local execution, custom CSS animation options, and Markdown transform mode."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "Must be executed as a local subprocess or containerized tool rather than HTTP API. Agents should invoke via npx or container volume mount (:z for Podman)."
+      ],
+      "id": 98
+    }
+  },
+  {
+    "app": "fanbasis",
+    "category": "Ecommerce",
+    "pass1": {
+      "app": "fanbasis",
+      "category": "Ecommerce",
+      "description": "Creator monetization and checkout platform for digital products and fan experiences (now Commas).",
+      "auth_methods": [
+        "API Key",
+        "Bearer Token"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free account registration with API key access in creator dashboard.",
+      "api": {
+        "availability": "LIMITED_API",
+        "type": [
+          "REST",
+          "SDK (@fanbasis/checkout-core)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "MEDIUM"
+      },
+      "mcp": {
+        "status": "NO_MCP_FOUND",
+        "official": "None",
+        "url": ""
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Rebranding to Commas in progress"
+      ],
+      "evidence": [
+        {
+          "claim": "Fanbasis provides checkout SDKs and API documentation hosted at docs.fanbasis.com.",
+          "url": "https://docs.fanbasis.com",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Fanbasis developer portal documents checkout sessions, webhook handlers, and API key authentication."
+        },
+        {
+          "claim": "API credentials and webhook endpoints can be configured in account settings.",
+          "url": "https://docs.fanbasis.com",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Documentation specifies self-serve key generation in creator integrations panel."
+        }
+      ],
+      "confidence": 0.91,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Full extent of REST endpoints outside checkout/webhooks during Commas rebrand"
+      ],
+      "research_notes": [
+        "Narrow checkout surface; buildable but limited in operational scope compared to full ecommerce platforms."
+      ],
+      "id": 50,
+      "pass1_raw_note": "Initial pass overestimated API breadth; verified pass confirmed scope is focused on checkout/webhooks during Commas rebrand."
+    },
+    "pass2": {
+      "app": "fanbasis",
+      "category": "Ecommerce",
+      "description": "Creator monetization and checkout platform for digital products and fan experiences (now Commas).",
+      "auth_methods": [
+        "API Key",
+        "Bearer Token"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free account registration with API key access in creator dashboard.",
+      "api": {
+        "availability": "LIMITED_API",
+        "type": [
+          "REST",
+          "SDK (@fanbasis/checkout-core)"
+        ],
+        "breadth": "NARROW",
+        "documentation_quality": "MEDIUM"
+      },
+      "mcp": {
+        "status": "NO_MCP_FOUND",
+        "official": "None",
+        "url": ""
+      },
+      "buildability": "MEDIUM",
+      "primary_blocker": "Limited public endpoint scope (focuses on checkout and webhooks)",
+      "secondary_blockers": [
+        "Rebranding to Commas in progress"
+      ],
+      "evidence": [
+        {
+          "claim": "Fanbasis provides checkout SDKs and API documentation hosted at docs.fanbasis.com.",
+          "url": "https://docs.fanbasis.com",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Fanbasis developer portal documents checkout sessions, webhook handlers, and API key authentication."
+        },
+        {
+          "claim": "API credentials and webhook endpoints can be configured in account settings.",
+          "url": "https://docs.fanbasis.com",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Documentation specifies self-serve key generation in creator integrations panel."
+        }
+      ],
+      "confidence": 0.91,
+      "human_verification_required": true,
+      "uncertainties": [
+        "Full extent of REST endpoints outside checkout/webhooks during Commas rebrand"
+      ],
+      "research_notes": [
+        "Narrow checkout surface; buildable but limited in operational scope compared to full ecommerce platforms."
+      ],
+      "id": 50
+    }
+  },
+  {
+    "app": "Stripe",
+    "category": "Finance and Fintech",
+    "pass1": {
+      "app": "Stripe",
+      "category": "Finance and Fintech",
+      "description": "Financial infrastructure platform for payment processing, subscription billing, payouts, and financial services.",
+      "auth_methods": [
+        "API Key (Secret Key)",
+        "OAuth 2.0 (Stripe Connect)",
+        "Restricted API Key"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Completely free test mode sandbox with instant API key access; no credit card required to develop.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP_SUPPORTED",
+        "official": "Vendor-supported",
+        "url": "https://github.com/stripe/agent-toolkit"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Idempotency-Key header requirement for mutate safety",
+        "PCI compliance rules for raw card processing"
+      ],
+      "evidence": [
+        {
+          "claim": "Stripe authenticates API requests using Secret API Keys passed in Authorization: Bearer header and OAuth 2.0.",
+          "url": "https://docs.stripe.com/api/authentication",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Stripe Docs specify Bearer token header format, test vs live keys, and restricted key permissions."
+        },
+        {
+          "claim": "Developers can sign up for free and generate test keys immediately in Stripe Dashboard.",
+          "url": "https://dashboard.stripe.com/test/apikeys",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Dashboard provides instant test mode keys (sk_test_...) without business verification."
+        }
+      ],
+      "confidence": 1.0,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "The gold standard of API design; official Stripe Agent Toolkit and MCP server available."
+      ],
+      "id": 81,
+      "pass1_raw_note": "Initial pass findings aligned with verified primary documentation."
+    },
+    "pass2": {
+      "app": "Stripe",
+      "category": "Finance and Fintech",
+      "description": "Financial infrastructure platform for payment processing, subscription billing, payouts, and financial services.",
+      "auth_methods": [
+        "API Key (Secret Key)",
+        "OAuth 2.0 (Stripe Connect)",
+        "Restricted API Key"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Completely free test mode sandbox with instant API key access; no credit card required to develop.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP_SUPPORTED",
+        "official": "Vendor-supported",
+        "url": "https://github.com/stripe/agent-toolkit"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Idempotency-Key header requirement for mutate safety",
+        "PCI compliance rules for raw card processing"
+      ],
+      "evidence": [
+        {
+          "claim": "Stripe authenticates API requests using Secret API Keys passed in Authorization: Bearer header and OAuth 2.0.",
+          "url": "https://docs.stripe.com/api/authentication",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Stripe Docs specify Bearer token header format, test vs live keys, and restricted key permissions."
+        },
+        {
+          "claim": "Developers can sign up for free and generate test keys immediately in Stripe Dashboard.",
+          "url": "https://dashboard.stripe.com/test/apikeys",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Dashboard provides instant test mode keys (sk_test_...) without business verification."
+        }
+      ],
+      "confidence": 1.0,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "The gold standard of API design; official Stripe Agent Toolkit and MCP server available."
+      ],
+      "id": 81
+    }
+  },
+  {
+    "app": "GitHub",
+    "category": "Developer, Infra and Data Platforms",
+    "pass1": {
+      "app": "GitHub",
+      "category": "Developer, Infra and Data Platforms",
+      "description": "Code hosting, Git version control, issue tracking, CI/CD actions, and software collaboration platform.",
+      "auth_methods": [
+        "Personal Access Token (PAT)",
+        "OAuth 2.0",
+        "Bearer Token (GitHub App JWT)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free account tier with full API, fine-grained PATs, and GitHub Apps support.",
+      "api": {
+        "availability": "REST_AND_GRAPHQL",
+        "type": [
+          "REST",
+          "GraphQL"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP_SUPPORTED",
+        "official": "Vendor-supported",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Rate limit of 5,000 requests/hour for authenticated users"
+      ],
+      "evidence": [
+        {
+          "claim": "GitHub REST and GraphQL APIs authenticate using Personal Access Tokens (PAT), OAuth 2.0, and GitHub App tokens.",
+          "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "GitHub Docs specify Bearer token header format (Authorization: Bearer <TOKEN>) and fine-grained PAT scopes."
+        },
+        {
+          "claim": "Developers can generate fine-grained Personal Access Tokens self-serve in Settings > Developer settings.",
+          "url": "https://github.com/settings/tokens?type=beta",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "GitHub settings portal provides instant creation of fine-grained tokens with repo-specific permissions."
+        }
+      ],
+      "confidence": 1.0,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "The quintessential developer platform; foundational integration for any coding agent."
+      ],
+      "id": 61,
+      "pass1_raw_note": "Initial pass findings aligned with verified primary documentation."
+    },
+    "pass2": {
+      "app": "GitHub",
+      "category": "Developer, Infra and Data Platforms",
+      "description": "Code hosting, Git version control, issue tracking, CI/CD actions, and software collaboration platform.",
+      "auth_methods": [
+        "Personal Access Token (PAT)",
+        "OAuth 2.0",
+        "Bearer Token (GitHub App JWT)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free account tier with full API, fine-grained PATs, and GitHub Apps support.",
+      "api": {
+        "availability": "REST_AND_GRAPHQL",
+        "type": [
+          "REST",
+          "GraphQL"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP_SUPPORTED",
+        "official": "Vendor-supported",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Rate limit of 5,000 requests/hour for authenticated users"
+      ],
+      "evidence": [
+        {
+          "claim": "GitHub REST and GraphQL APIs authenticate using Personal Access Tokens (PAT), OAuth 2.0, and GitHub App tokens.",
+          "url": "https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "GitHub Docs specify Bearer token header format (Authorization: Bearer <TOKEN>) and fine-grained PAT scopes."
+        },
+        {
+          "claim": "Developers can generate fine-grained Personal Access Tokens self-serve in Settings > Developer settings.",
+          "url": "https://github.com/settings/tokens?type=beta",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "GitHub settings portal provides instant creation of fine-grained tokens with repo-specific permissions."
+        }
+      ],
+      "confidence": 1.0,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "The quintessential developer platform; foundational integration for any coding agent."
+      ],
+      "id": 61
+    }
+  },
+  {
+    "app": "HubSpot",
+    "category": "CRM and Sales",
+    "pass1": {
+      "app": "HubSpot",
+      "category": "CRM and Sales",
+      "description": "Inbound marketing, sales CRM, customer service, and content management platform.",
+      "auth_methods": [
+        "OAuth 2.0",
+        "Private App Access Token"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free Developer Account and app test accounts with full API access.",
+      "api": {
+        "availability": "REST_AND_GRAPHQL",
+        "type": [
+          "REST",
+          "GraphQL"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "COMMUNITY_MCP",
+        "official": "Community",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/hubspot"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Rate limit of 100 requests per 10 seconds"
+      ],
+      "evidence": [
+        {
+          "claim": "HubSpot uses OAuth 2.0 for public integrations and Private App Tokens for internal integrations.",
+          "url": "https://developers.hubspot.com/docs/api/working-with-oauth",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "HubSpot Developer Docs state OAuth 2.0 is standard for public apps and private apps use Bearer access tokens."
+        },
+        {
+          "claim": "HubSpot provides free developer accounts with unlimited test portals.",
+          "url": "https://developers.hubspot.com/get-started",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "HubSpot developer portal allows instant free registration for app development and testing."
+        }
+      ],
+      "confidence": 0.98,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "Excellent API consistency with OpenAPI specifications available."
+      ],
+      "id": 2,
+      "pass1_raw_note": "Initial pass findings aligned with verified primary documentation."
+    },
+    "pass2": {
+      "app": "HubSpot",
+      "category": "CRM and Sales",
+      "description": "Inbound marketing, sales CRM, customer service, and content management platform.",
+      "auth_methods": [
+        "OAuth 2.0",
+        "Private App Access Token"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free Developer Account and app test accounts with full API access.",
+      "api": {
+        "availability": "REST_AND_GRAPHQL",
+        "type": [
+          "REST",
+          "GraphQL"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "COMMUNITY_MCP",
+        "official": "Community",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/hubspot"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Rate limit of 100 requests per 10 seconds"
+      ],
+      "evidence": [
+        {
+          "claim": "HubSpot uses OAuth 2.0 for public integrations and Private App Tokens for internal integrations.",
+          "url": "https://developers.hubspot.com/docs/api/working-with-oauth",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "HubSpot Developer Docs state OAuth 2.0 is standard for public apps and private apps use Bearer access tokens."
+        },
+        {
+          "claim": "HubSpot provides free developer accounts with unlimited test portals.",
+          "url": "https://developers.hubspot.com/get-started",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "HubSpot developer portal allows instant free registration for app development and testing."
+        }
+      ],
+      "confidence": 0.98,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "Excellent API consistency with OpenAPI specifications available."
+      ],
+      "id": 2
+    }
+  },
+  {
+    "app": "Notion",
+    "category": "Productivity and Project Management",
+    "pass1": {
+      "app": "Notion",
+      "category": "Productivity and Project Management",
+      "description": "Connected workspace for notes, documents, wikis, databases, and collaborative project management.",
+      "auth_methods": [
+        "Internal Integration Secret (Bearer Token)",
+        "OAuth 2.0"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free tier with unlimited internal integrations and full REST API access.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (v1 API)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP_SUPPORTED",
+        "official": "Vendor-supported",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/notion"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Pages/databases must be explicitly shared with the internal integration",
+        "Notion-Version header requirement"
+      ],
+      "evidence": [
+        {
+          "claim": "Notion API authenticates using Bearer tokens in Authorization header with Notion-Version header.",
+          "url": "https://developers.notion.com/docs/authorization",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Notion Developer documentation details Internal Integration Secrets and OAuth 2.0 authorization code flows."
+        },
+        {
+          "claim": "Internal integrations and tokens can be created self-serve for free at notion.so/my-integrations.",
+          "url": "https://www.notion.so/profile/integrations",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Notion integrations dashboard enables instant secret generation without fees or review."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "One of the most widely used tool integrations in AI agent workflows."
+      ],
+      "id": 71,
+      "pass1_raw_note": "Initial pass findings aligned with verified primary documentation."
+    },
+    "pass2": {
+      "app": "Notion",
+      "category": "Productivity and Project Management",
+      "description": "Connected workspace for notes, documents, wikis, databases, and collaborative project management.",
+      "auth_methods": [
+        "Internal Integration Secret (Bearer Token)",
+        "OAuth 2.0"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free tier with unlimited internal integrations and full REST API access.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (v1 API)"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP_SUPPORTED",
+        "official": "Vendor-supported",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/notion"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Pages/databases must be explicitly shared with the internal integration",
+        "Notion-Version header requirement"
+      ],
+      "evidence": [
+        {
+          "claim": "Notion API authenticates using Bearer tokens in Authorization header with Notion-Version header.",
+          "url": "https://developers.notion.com/docs/authorization",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Notion Developer documentation details Internal Integration Secrets and OAuth 2.0 authorization code flows."
+        },
+        {
+          "claim": "Internal integrations and tokens can be created self-serve for free at notion.so/my-integrations.",
+          "url": "https://www.notion.so/profile/integrations",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Notion integrations dashboard enables instant secret generation without fees or review."
+        }
+      ],
+      "confidence": 0.99,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "One of the most widely used tool integrations in AI agent workflows."
+      ],
+      "id": 71
+    }
+  },
+  {
+    "app": "Airtable",
+    "category": "Productivity and Project Management",
+    "pass1": {
+      "app": "Airtable",
+      "category": "Productivity and Project Management",
+      "description": "Low-code platform for building relational database applications, collaborative tables, and workflows.",
+      "auth_methods": [
+        "Personal Access Token (PAT)",
+        "OAuth 2.0"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free tier with full REST API and Personal Access Token support.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (v0 Web API)",
+          "Metadata API"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP_SUPPORTED",
+        "official": "Vendor-supported",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/airtable"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Rate limit of 5 requests per second per base"
+      ],
+      "evidence": [
+        {
+          "claim": "Airtable Web API authenticates using Personal Access Tokens (Bearer) and OAuth 2.0.",
+          "url": "https://airtable.com/developers/web/api/authentication",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Airtable documentation details Bearer token authentication in Authorization header and granular PAT scopes."
+        },
+        {
+          "claim": "Personal Access Tokens can be created self-serve in Airtable Developer Hub.",
+          "url": "https://airtable.com/create/tokens",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Developer Hub allows instant PAT generation with base-specific permissions."
+        }
+      ],
+      "confidence": 1.0,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "Interactive auto-generated documentation per base makes tool schemas trivial to derive."
+      ],
+      "id": 72,
+      "pass1_raw_note": "Initial pass findings aligned with verified primary documentation."
+    },
+    "pass2": {
+      "app": "Airtable",
+      "category": "Productivity and Project Management",
+      "description": "Low-code platform for building relational database applications, collaborative tables, and workflows.",
+      "auth_methods": [
+        "Personal Access Token (PAT)",
+        "OAuth 2.0"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free tier with full REST API and Personal Access Token support.",
+      "api": {
+        "availability": "REST",
+        "type": [
+          "REST (v0 Web API)",
+          "Metadata API"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP_SUPPORTED",
+        "official": "Vendor-supported",
+        "url": "https://github.com/modelcontextprotocol/servers/tree/main/src/airtable"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Rate limit of 5 requests per second per base"
+      ],
+      "evidence": [
+        {
+          "claim": "Airtable Web API authenticates using Personal Access Tokens (Bearer) and OAuth 2.0.",
+          "url": "https://airtable.com/developers/web/api/authentication",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Airtable documentation details Bearer token authentication in Authorization header and granular PAT scopes."
+        },
+        {
+          "claim": "Personal Access Tokens can be created self-serve in Airtable Developer Hub.",
+          "url": "https://airtable.com/create/tokens",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Developer Hub allows instant PAT generation with base-specific permissions."
+        }
+      ],
+      "confidence": 1.0,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "Interactive auto-generated documentation per base makes tool schemas trivial to derive."
+      ],
+      "id": 72
+    }
+  },
+  {
+    "app": "Supabase",
+    "category": "Developer, Infra and Data Platforms",
+    "pass1": {
+      "app": "Supabase",
+      "category": "Developer, Infra and Data Platforms",
+      "description": "Open-source Firebase alternative providing PostgreSQL database, Auth, Storage, Edge Functions, and Realtime.",
+      "auth_methods": [
+        "API Key (Anon / Service Role Bearer)",
+        "Personal Access Token (PAT)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free tier (2 free PostgreSQL projects) or completely free open-source self-hosting.",
+      "api": {
+        "availability": "REST_AND_GRAPHQL",
+        "type": [
+          "REST (PostgREST)",
+          "GraphQL (pg_graphql)",
+          "Management API"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP_SUPPORTED",
+        "official": "Vendor-supported",
+        "url": "https://github.com/supabase/mcp-server-supabase"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Row Level Security (RLS) policies must be configured appropriately for keys"
+      ],
+      "evidence": [
+        {
+          "claim": "Supabase provides auto-generated REST APIs (PostgREST) and Management APIs with Bearer token authentication.",
+          "url": "https://supabase.com/docs/guides/api",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Supabase documentation details anon/service_role API keys passed as apikey header and Bearer token."
+        },
+        {
+          "claim": "API keys and database credentials are generated instantly upon project creation.",
+          "url": "https://supabase.com/dashboard/project/_/settings/api",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Dashboard gives immediate access to project URL, anon key, and service_role secret."
+        }
+      ],
+      "confidence": 1.0,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "Prime agent candidate; instant SQL execution, schema inspection, and data storage."
+      ],
+      "id": 65,
+      "pass1_raw_note": "Initial pass findings aligned with verified primary documentation."
+    },
+    "pass2": {
+      "app": "Supabase",
+      "category": "Developer, Infra and Data Platforms",
+      "description": "Open-source Firebase alternative providing PostgreSQL database, Auth, Storage, Edge Functions, and Realtime.",
+      "auth_methods": [
+        "API Key (Anon / Service Role Bearer)",
+        "Personal Access Token (PAT)"
+      ],
+      "credential_access": "SELF_SERVE",
+      "free_or_trial_access": "Free tier (2 free PostgreSQL projects) or completely free open-source self-hosting.",
+      "api": {
+        "availability": "REST_AND_GRAPHQL",
+        "type": [
+          "REST (PostgREST)",
+          "GraphQL (pg_graphql)",
+          "Management API"
+        ],
+        "breadth": "BROAD",
+        "documentation_quality": "HIGH"
+      },
+      "mcp": {
+        "status": "OFFICIAL_MCP_SUPPORTED",
+        "official": "Vendor-supported",
+        "url": "https://github.com/supabase/mcp-server-supabase"
+      },
+      "buildability": "HIGH",
+      "primary_blocker": "None",
+      "secondary_blockers": [
+        "Row Level Security (RLS) policies must be configured appropriately for keys"
+      ],
+      "evidence": [
+        {
+          "claim": "Supabase provides auto-generated REST APIs (PostgREST) and Management APIs with Bearer token authentication.",
+          "url": "https://supabase.com/docs/guides/api",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Supabase documentation details anon/service_role API keys passed as apikey header and Bearer token."
+        },
+        {
+          "claim": "API keys and database credentials are generated instantly upon project creation.",
+          "url": "https://supabase.com/dashboard/project/_/settings/api",
+          "source_type": "TIER 1 \u2014 OFFICIAL PRIMARY SOURCES",
+          "evidence_summary": "Dashboard gives immediate access to project URL, anon key, and service_role secret."
+        }
+      ],
+      "confidence": 1.0,
+      "human_verification_required": false,
+      "uncertainties": [],
+      "research_notes": [
+        "Prime agent candidate; instant SQL execution, schema inspection, and data storage."
+      ],
+      "id": 65
+    }
+  }
+]

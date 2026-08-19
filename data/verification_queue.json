@@ -1,0 +1,122 @@
+[
+  {
+    "id": 10,
+    "app": "DealCloud",
+    "category": "CRM and Sales",
+    "field_to_verify": "Credential Access & Gating",
+    "agent_finding": "ADMIN_APPROVAL / Gated behind enterprise contract",
+    "evidence_url": "https://api.docs.dealcloud.com/",
+    "why_selected": "High-value enterprise fintech CRM with OAuth 2.0 docs, but credential generation requires administrator capability enablement.",
+    "expected_check": "Verify whether non-customers can acquire sandbox developer credentials without contacting enterprise sales."
+  },
+  {
+    "id": 20,
+    "app": "Gladly",
+    "category": "Support and Helpdesk",
+    "field_to_verify": "Credential Access & Pricing Gating",
+    "agent_finding": "ADMIN_APPROVAL / HTTP Basic with API Token",
+    "evidence_url": "https://developer.gladly.com/rest/",
+    "why_selected": "Helpdesk platform with public REST documentation, but API tokens require admin-assigned API User role on enterprise instances.",
+    "expected_check": "Verify if self-serve trial registration allows immediate API token generation."
+  },
+  {
+    "id": 28,
+    "app": "WhatsApp Business",
+    "category": "Communications and Messaging",
+    "field_to_verify": "Production Access Requirements",
+    "agent_finding": "SELF_SERVE_WITH_PLAN_REQUIREMENT (Meta Business Verification for production)",
+    "evidence_url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started",
+    "why_selected": "Sandbox Cloud API is self-serve, but real-world production messaging requires business registration and message template pre-approval.",
+    "expected_check": "Verify Meta Business Verification requirement vs test number capabilities."
+  },
+  {
+    "id": 31,
+    "app": "Google Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "field_to_verify": "Developer Token Approval Gate",
+    "agent_finding": "ADMIN_APPROVAL / Developer Token application required for production",
+    "evidence_url": "https://developers.google.com/google-ads/api/docs/first-call/overview",
+    "why_selected": "Test accounts are self-serve, but production access requires an approved Developer Token application review by Google Ads compliance.",
+    "expected_check": "Verify Developer Token review process and test account limitations."
+  },
+  {
+    "id": 33,
+    "app": "LinkedIn Ads",
+    "category": "Marketing, Ads, Email and Social",
+    "field_to_verify": "Marketing Developer Platform (MDP) Gating",
+    "agent_finding": "PARTNER_OR_SALES_GATED (MDP Application approval required)",
+    "evidence_url": "https://learn.microsoft.com/en-us/linkedin/marketing/overview",
+    "why_selected": "OAuth 2.0 documentation is public, but ad management APIs require formal MDP developer application approval.",
+    "expected_check": "Confirm whether individual developers can access write endpoints without ad account sponsorship."
+  },
+  {
+    "id": 49,
+    "app": "Amazon Selling Partner",
+    "category": "Ecommerce",
+    "field_to_verify": "Restricted Data & SP-API Vetting",
+    "agent_finding": "PARTNER_OR_SALES_GATED (Low Buildability / Strict PII Review)",
+    "evidence_url": "https://developer-docs.amazon.com/sp-api/docs/connecting-to-the-selling-partner-api",
+    "why_selected": "Dual authentication (LWA OAuth 2.0 + AWS SigV4) and strict Restricted Data Role compliance reviews represent severe developer friction.",
+    "expected_check": "Verify requirements for accessing buyer PII and order management endpoints."
+  },
+  {
+    "id": 50,
+    "app": "fanbasis",
+    "category": "Ecommerce",
+    "field_to_verify": "Rebranding & API Scope",
+    "agent_finding": "SELF_SERVE / LIMITED_API (Narrow Scope - Checkout & Webhooks)",
+    "evidence_url": "https://docs.fanbasis.com",
+    "why_selected": "Company rebranding to Commas; API focuses specifically on checkout SDK and webhooks rather than broad catalog management.",
+    "expected_check": "Verify active endpoints at docs.fanbasis.com vs Commas docs."
+  },
+  {
+    "id": 58,
+    "app": "Sherlock",
+    "category": "Data, SEO and Scraping",
+    "field_to_verify": "API Surface Classification",
+    "agent_finding": "CLI_ONLY (Open-source Python CLI; No hosted cloud REST API)",
+    "evidence_url": "https://github.com/sherlock-project/sherlock",
+    "why_selected": "Open-source tool on GitHub often mistaken for a cloud API; requires local CLI / Docker execution.",
+    "expected_check": "Verify absence of official hosted REST endpoints."
+  },
+  {
+    "id": 90,
+    "app": "PitchBook",
+    "category": "Finance and Fintech",
+    "field_to_verify": "Commercial Enterprise Paywall Gate",
+    "agent_finding": "PARTNER_OR_SALES_GATED (Low Buildability / $20k+ contract)",
+    "evidence_url": "https://pitchbook.com/products/data/direct-data",
+    "why_selected": "Direct Data API exists with robust documentation, but requires custom commercial enterprise contract.",
+    "expected_check": "Confirm absence of self-serve developer signup or public sandbox."
+  },
+  {
+    "id": 91,
+    "app": "NotebookLM",
+    "category": "AI, Research and Media-native",
+    "field_to_verify": "Public API Availability vs Enterprise GCP Gating",
+    "agent_finding": "ADMIN_APPROVAL / LIMITED_API (Enterprise GCP Gemini API Only)",
+    "evidence_url": "https://cloud.google.com/gemini/docs",
+    "why_selected": "Consumer NotebookLM has no public developer API; programmatic access is restricted to Google Cloud Gemini Enterprise licensing.",
+    "expected_check": "Verify that consumer app cannot be called programmatically without Google Cloud enterprise licensing."
+  },
+  {
+    "id": 94,
+    "app": "Consensus",
+    "category": "AI, Research and Media-native",
+    "field_to_verify": "Developer Access & Domain Distinction",
+    "agent_finding": "ADMIN_APPROVAL (Application request on consensus.app)",
+    "evidence_url": "https://docs.consensus.app/",
+    "why_selected": "Must be distinguished from goconsensus.com (sales demo software); academic research API requires developer application request.",
+    "expected_check": "Verify developer application requirement on docs.consensus.app."
+  },
+  {
+    "id": 98,
+    "app": "Mermaid CLI",
+    "category": "AI, Research and Media-native",
+    "field_to_verify": "Execution Environment",
+    "agent_finding": "CLI_ONLY (Open-source Node.js package; No hosted REST API)",
+    "evidence_url": "https://github.com/mermaid-js/mermaid-cli",
+    "why_selected": "Widely used diagram renderer; requires local node execution (mmdc) rather than REST API invocation.",
+    "expected_check": "Verify local CLI dependency vs hosted rendering service."
+  }
+]

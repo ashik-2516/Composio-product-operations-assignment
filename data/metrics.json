@@ -1,0 +1,401 @@
+{
+  "total_apps": 100,
+  "authentication_distribution": {
+    "OAuth 2.0": {
+      "count": 66,
+      "pct": 66.0
+    },
+    "API Key / Secret": {
+      "count": 68,
+      "pct": 68.0
+    },
+    "Bearer / Access Token": {
+      "count": 58,
+      "pct": 58.0
+    },
+    "Basic Authentication": {
+      "count": 16,
+      "pct": 16.0
+    },
+    "HMAC / Signature": {
+      "count": 1,
+      "pct": 1.0
+    },
+    "JWT / SAML": {
+      "count": 7,
+      "pct": 7.0
+    },
+    "No Auth / CLI Only": {
+      "count": 2,
+      "pct": 2.0
+    }
+  },
+  "credential_accessibility": {
+    "SELF_SERVE": {
+      "count": 73,
+      "pct": 73.0
+    },
+    "SELF_SERVE_WITH_PLAN_REQUIREMENT": {
+      "count": 17,
+      "pct": 17.0
+    },
+    "ADMIN_APPROVAL": {
+      "count": 7,
+      "pct": 7.0
+    },
+    "PARTNER_OR_SALES_GATED": {
+      "count": 3,
+      "pct": 3.0
+    },
+    "MIXED": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "UNKNOWN": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "api_availability": {
+    "REST": {
+      "count": 81,
+      "pct": 81.0
+    },
+    "GRAPHQL": {
+      "count": 3,
+      "pct": 3.0
+    },
+    "REST_AND_GRAPHQL": {
+      "count": 12,
+      "pct": 12.0
+    },
+    "CLI_ONLY": {
+      "count": 2,
+      "pct": 2.0
+    },
+    "LIMITED_API": {
+      "count": 2,
+      "pct": 2.0
+    },
+    "NO_PUBLIC_API": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "UNKNOWN": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "api_breadth": {
+    "BROAD": {
+      "count": 75,
+      "pct": 75.0
+    },
+    "MEDIUM": {
+      "count": 23,
+      "pct": 23.0
+    },
+    "NARROW": {
+      "count": 2,
+      "pct": 2.0
+    },
+    "UNKNOWN": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "mcp_status": {
+    "OFFICIAL_MCP": {
+      "count": 6,
+      "pct": 6.0
+    },
+    "OFFICIAL_MCP_SUPPORTED": {
+      "count": 21,
+      "pct": 21.0
+    },
+    "COMMUNITY_MCP": {
+      "count": 57,
+      "pct": 57.0
+    },
+    "NO_MCP_FOUND": {
+      "count": 16,
+      "pct": 16.0
+    },
+    "UNKNOWN": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "buildability_verdicts": {
+    "HIGH": {
+      "count": 84,
+      "pct": 84.0
+    },
+    "MEDIUM": {
+      "count": 13,
+      "pct": 13.0
+    },
+    "LOW": {
+      "count": 3,
+      "pct": 3.0
+    },
+    "UNKNOWN": {
+      "count": 0,
+      "pct": 0.0
+    }
+  },
+  "priority_tiers": {
+    "tier1_easy_wins": {
+      "count": 70,
+      "pct": 70.0,
+      "apps": [
+        "Salesforce",
+        "HubSpot",
+        "Pipedrive",
+        "Attio",
+        "Twenty",
+        "Podio",
+        "Zoho CRM",
+        "Close",
+        "Zendesk",
+        "Intercom",
+        "Freshdesk",
+        "LiveAgent",
+        "Plain",
+        "Help Scout",
+        "Slack",
+        "Twilio",
+        "Zoho Cliq",
+        "Lark (Larksuite)",
+        "Pumble",
+        "Discord",
+        "Telegram",
+        "Vonage",
+        "Mailchimp",
+        "Klaviyo",
+        "systeme.io",
+        "Pinterest",
+        "Threads (Meta)",
+        "SendGrid",
+        "Shopify",
+        "WooCommerce",
+        "BigCommerce",
+        "Magento (Adobe Commerce)",
+        "Ecwid",
+        "Gumroad",
+        "DataForSEO",
+        "MrScraper",
+        "Apify",
+        "Firecrawl",
+        "Bright Data",
+        "GitHub",
+        "Vercel",
+        "Netlify",
+        "Cloudflare",
+        "Supabase",
+        "Neo4j",
+        "Snowflake",
+        "MongoDB Atlas",
+        "Datadog",
+        "Sentry",
+        "Notion",
+        "Airtable",
+        "Linear",
+        "Jira",
+        "Asana",
+        "Monday.com",
+        "ClickUp",
+        "Coda",
+        "Smartsheet",
+        "Harvest",
+        "Stripe",
+        "Plaid",
+        "Binance",
+        "iPayX",
+        "QuickBooks",
+        "Xero",
+        "Fathom",
+        "Consensus",
+        "Reducto",
+        "higgsfield",
+        "YouTube Transcript"
+      ]
+    },
+    "tier2_friction": {
+      "count": 16,
+      "pct": 16.0,
+      "apps": [
+        "Copper",
+        "Front",
+        "Gorgias",
+        "Aircall",
+        "GoHighLevel",
+        "Squarespace",
+        "SE Ranking",
+        "Sherlock",
+        "Waterfall.io",
+        "Clay",
+        "Brex",
+        "Ramp",
+        "Otter AI",
+        "Devin",
+        "Mermaid CLI",
+        "Grain"
+      ]
+    },
+    "tier3_outreach": {
+      "count": 7,
+      "pct": 7.0,
+      "apps": [
+        "DealCloud",
+        "Pylon",
+        "Gladly",
+        "Google Ads",
+        "LinkedIn Ads",
+        "Salesforce Commerce Cloud",
+        "Paygent Connect"
+      ]
+    },
+    "tier4_poor_candidate": {
+      "count": 7,
+      "pct": 7.0,
+      "apps": [
+        "WhatsApp Business",
+        "Meta Ads",
+        "Amazon Selling Partner",
+        "fanbasis",
+        "Ahrefs",
+        "PitchBook",
+        "NotebookLM"
+      ]
+    }
+  },
+  "category_metrics": {
+    "AI, Research and Media-native": {
+      "total": 10,
+      "self_serve_pct": 60.0,
+      "plan_req_pct": 30.0,
+      "gated_pct": 10.0,
+      "oauth_pct": 50.0,
+      "high_build_pct": 80.0,
+      "med_build_pct": 10.0,
+      "low_build_pct": 10.0,
+      "official_mcp_pct": 60.0,
+      "comm_mcp_pct": 10.0
+    },
+    "CRM and Sales": {
+      "total": 10,
+      "self_serve_pct": 80.0,
+      "plan_req_pct": 10.0,
+      "gated_pct": 10.0,
+      "oauth_pct": 80.0,
+      "high_build_pct": 90.0,
+      "med_build_pct": 10.0,
+      "low_build_pct": 0.0,
+      "official_mcp_pct": 10.0,
+      "comm_mcp_pct": 70.0
+    },
+    "Communications and Messaging": {
+      "total": 10,
+      "self_serve_pct": 80.0,
+      "plan_req_pct": 20.0,
+      "gated_pct": 0.0,
+      "oauth_pct": 80.0,
+      "high_build_pct": 90.0,
+      "med_build_pct": 10.0,
+      "low_build_pct": 0.0,
+      "official_mcp_pct": 10.0,
+      "comm_mcp_pct": 80.0
+    },
+    "Data, SEO and Scraping": {
+      "total": 10,
+      "self_serve_pct": 60.0,
+      "plan_req_pct": 40.0,
+      "gated_pct": 0.0,
+      "oauth_pct": 10.0,
+      "high_build_pct": 80.0,
+      "med_build_pct": 20.0,
+      "low_build_pct": 0.0,
+      "official_mcp_pct": 30.0,
+      "comm_mcp_pct": 40.0
+    },
+    "Developer, Infra and Data Platforms": {
+      "total": 10,
+      "self_serve_pct": 100.0,
+      "plan_req_pct": 0.0,
+      "gated_pct": 0.0,
+      "oauth_pct": 60.0,
+      "high_build_pct": 100.0,
+      "med_build_pct": 0.0,
+      "low_build_pct": 0.0,
+      "official_mcp_pct": 70.0,
+      "comm_mcp_pct": 30.0
+    },
+    "Ecommerce": {
+      "total": 10,
+      "self_serve_pct": 70.0,
+      "plan_req_pct": 10.0,
+      "gated_pct": 20.0,
+      "oauth_pct": 90.0,
+      "high_build_pct": 70.0,
+      "med_build_pct": 20.0,
+      "low_build_pct": 10.0,
+      "official_mcp_pct": 10.0,
+      "comm_mcp_pct": 70.0
+    },
+    "Finance and Fintech": {
+      "total": 10,
+      "self_serve_pct": 60.0,
+      "plan_req_pct": 20.0,
+      "gated_pct": 20.0,
+      "oauth_pct": 50.0,
+      "high_build_pct": 80.0,
+      "med_build_pct": 10.0,
+      "low_build_pct": 10.0,
+      "official_mcp_pct": 10.0,
+      "comm_mcp_pct": 60.0
+    },
+    "Marketing, Ads, Email and Social": {
+      "total": 10,
+      "self_serve_pct": 60.0,
+      "plan_req_pct": 20.0,
+      "gated_pct": 20.0,
+      "oauth_pct": 80.0,
+      "high_build_pct": 70.0,
+      "med_build_pct": 30.0,
+      "low_build_pct": 0.0,
+      "official_mcp_pct": 20.0,
+      "comm_mcp_pct": 80.0
+    },
+    "Productivity and Project Management": {
+      "total": 10,
+      "self_serve_pct": 100.0,
+      "plan_req_pct": 0.0,
+      "gated_pct": 0.0,
+      "oauth_pct": 100.0,
+      "high_build_pct": 100.0,
+      "med_build_pct": 0.0,
+      "low_build_pct": 0.0,
+      "official_mcp_pct": 40.0,
+      "comm_mcp_pct": 60.0
+    },
+    "Support and Helpdesk": {
+      "total": 10,
+      "self_serve_pct": 60.0,
+      "plan_req_pct": 20.0,
+      "gated_pct": 20.0,
+      "oauth_pct": 60.0,
+      "high_build_pct": 80.0,
+      "med_build_pct": 20.0,
+      "low_build_pct": 0.0,
+      "official_mcp_pct": 10.0,
+      "comm_mcp_pct": 70.0
+    }
+  },
+  "verification_accuracy": {
+    "pass1_raw_accuracy_pct": 74.0,
+    "pass2_verified_accuracy_pct": 97.0,
+    "discrepancies_resolved": 12,
+    "human_queue_count": 12
+  }
+}
