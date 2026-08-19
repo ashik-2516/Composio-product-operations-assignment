@@ -9,9 +9,12 @@ HEADER_HTML = '''<!DOCTYPE html>
   <meta name="description" content="Composio AI Product Operations Case Study: 100-App Integration-Readiness Audit across 10 SaaS categories.">
   <title>Composio AI Product Ops | 100-App Integration-Readiness Audit</title>
 
-  <!-- Favicon (Inline SVG Data URI + standalone fallback) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 32 32\'%3E%3Crect width=\'32\' height=\'32\' rx=\'7\' fill=\'%2310111a\'/%3E%3Crect x=\'3\' y=\'3\' width=\'26\' height=\'26\' rx=\'5\' fill=\'%23506080\'/%3E%3Ctext x=\'16\' y=\'22\' font-family=\'sans-serif\' font-size=\'18\' font-weight=\'900\' fill=\'%23ffffff\' text-anchor=\'middle\'%3EC%3C/text%3E%3C/svg%3E">
-  <link rel="alternate icon" href="favicon.svg" type="image/svg+xml">
+  <!-- Universal Favicon Suite (Base64 PNG + Root ICO + SVG Fallback) -->
+  <link rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAEcElEQVR4nOWba0wcVRTH/3PZXZZll+7yXh7dQqFUWkHbSGsfhsZUTdtU1EajQRJfGI01JmrSTzYm+EUTtSZNtDFp7AejTYxgUq1USCkpVbRgX7SlQguFugW3QF32vWDmYi5ot7CzdLLcub9kknNn5p695z9n7syc2ZGstpxJCAyB4BAIDoHg6ObTufLRWiwUjjbsi6mfpHQSXEhB3wkxiNaCVzpOKZoM4CXwWLKBaDn4aMZP5tOZF2aLg0BwiNaP/lzxECU7806kuAgEh0BwiCjpf7v4CASHQHAIBEcXjx81JxtRsjQfNqsZiyzJCAZDcHt86B8cwuV+J8LhCW0KUHFvCbZtXoPSEgcSSOTk8/mDOHbiNBp+PIFrTpc2BEizWbDzhSqUryi8ZZvXF4DBoGOCGBP1eKhyNTatL8f+rxrxQ/OvfAtgz0rFu2/XICNtEW2HQmEcaenAsZ/P0HT3B4J0fXamDavuLsb2h9ciK8MGvV6H2me3INGgR/3hNj4FSLGY8N6u5+i5LjPodOGDvQfRNzB0y77OoRF839SOptZOvPb8dmxYs5Kur3lyM7p7B9DV3c/fVeD1F6tY8MOuMex+/0DE4GciZ8TH+77F+UtTAUsS8FL1FtXGSNRyvL5iBVaXFbP2J5/XwzVyM6q+4YkJfHbgEGsvyc/CsqV5fAlQ9cg6Zh9vP4ezF64o6i9nyrmLfax93z3LwI0ARUtyUFSQw9qxzuQdpy8xu3CxHdxMgmWlBcweHXP/50gqofn4KTpxyni8PnAjQGmJg9ndvYMx+5HF+6XjAtSEqOHUnpnK7P45Zv14Q9RwajGbmO32eCGcACZTIrN9vgCEE8Dvn7q9lTEaDRBOAPf4dNqbTUkQTgDXjDu+/NwMLGR0aji92DOAu4oXU7uoIDdmP7n2dOTZ06l9fXgEV65eBxcZcH7Gk5tcC1helB+Tn2ce34RdO5+iS8Wq5VADoobTjjN/YPTmOGvLBQ6l6HUJKC+dLqBc7vsT3AgQCoXRePQka1euK6PPB0p44P4yJJuM1PZ4/TjV1QuungYbDrfhrxtTk6EkSXij9jFYzNFdEVLMJlTveJC1G1tOIhAI8SWAx+vH3v3fYXJyekJ7581qZKZbZ+2XarVg91vVsKYks0LK1/Utag0TqlaEfj/b868IUyrIp8Geulfo0XXkZSIhgbAMkYseT1dVYk/dqyh02Nn9RN1HX8LnD/BbFG1q7YTX68fLNVtpjdCYaMATWzfQRdbF6/MjyWigIsxEvuR9+Ok3uHptmP+yeNtvXXQS27FtIzauXYk0WwpdL8dsSpp+bpCRAz70UzuaWzsRDIW182Jk3OPDFweP0KXQkY2c7HR6nssZIW8bGXOju2cAN0b/huZfjfX2OemyECAQHALBIRAccqf+dc0L/4+PQHAIBIdEWqnV0yBSXETJzjxzu3gIBIfMtlErWTBbHGQ+nXlgrvFLSj6a4ulvtNEeOKKG03ijZJzSfL4dFvK7Qa1BIDgk3gOIN/8ACpp3QvajoqoAAAAASUVORK5CYII=">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.png">
 
   <!-- Preconnect & DNS-Prefetch for Speed -->
   <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
@@ -61,7 +64,6 @@ HEADER_HTML = '''<!DOCTYPE html>
   </script>
 
   <style>
-    /* Critical Paint Styles */
     :root {
       color-scheme: dark;
     }
